@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+*{margin:0; padding:0; box-sizing:border-box}
+body{width:1200px; height:630px; overflow:hidden; font-family:-apple-system,"Segoe UI",system-ui,sans-serif;
+  background:linear-gradient(135deg,#3d0c16 0%, #6b1f2a 55%, #8a2a3a 100%); color:#fff; position:relative}
+.marca{position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 600px 400px at 88% -10%, rgba(224,180,92,.20), transparent 60%),
+    radial-gradient(ellipse 700px 500px at -5% 110%, rgba(0,0,0,.30), transparent 60%)}
+.wrap{position:relative; height:100%; padding:64px 72px; display:flex; flex-direction:column; justify-content:space-between}
+.kicker{display:inline-flex; align-items:center; gap:10px; font-size:24px; font-weight:700; letter-spacing:.14em; color:#e0b45c}
+.kicker .dot{width:12px; height:12px; border-radius:50%; background:#e0b45c}
+h1{font-size:84px; line-height:1.04; font-weight:800; letter-spacing:-.015em; margin-top:18px}
+h1 .sm{color:#e0b45c}
+.sub{font-size:29px; color:rgba(255,255,255,.88); margin-top:18px; max-width:21em; line-height:1.35}
+.chips{display:flex; gap:16px; flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.12); border:1.5px solid rgba(255,255,255,.28);
+  border-radius:16px; padding:18px 26px}
+.chip b{display:block; font-size:38px; letter-spacing:-.01em}
+.chip span{font-size:19px; color:rgba(255,255,255,.82)}
+.foot{display:flex; justify-content:space-between; align-items:center; font-size:22px; color:rgba(255,255,255,.75)}
+.foot .url{font-weight:700; color:#e0b45c}
+.barras{position:absolute; right:72px; top:116px; display:flex; align-items:flex-end; gap:14px; height:200px; opacity:.9}
+.barras i{display:block; width:34px; border-radius:8px 8px 3px 3px; background:linear-gradient(180deg,#e0b45c,#b9862e)}
+.barras i:nth-child(3){background:linear-gradient(180deg,#ffffff,#ead9bd); opacity:.6}
+</style>
+</head>
+<body>
+<div class="marca"></div>
+<div class="wrap">
+  <div>
+    <span class="kicker"><span class="dot"></span>ESTADÍSTICAS ABIERTAS · LIMA · DESDE 1551</span>
+    <h1>Admisión <span class="sm">San Marcos</span><br>en cifras</h1>
+    <p class="sub">Notas de cierre por escuela y modalidad, competencia y vacantes · Proceso 2026-1</p>
+  </div>
+  <div class="barras">
+    <i style="height:70px"></i><i style="height:112px"></i><i style="height:92px"></i><i style="height:146px"></i><i style="height:124px"></i><i style="height:176px"></i>
+  </div>
+  <div class="chips">
+    <div class="chip"><b>30,222</b><span>postulantes 2026-1</span></div>
+    <div class="chip"><b>95</b><span>escuelas profesionales</span></div>
+    <div class="chip"><b>1 de 94</b><span>ingresa a Medicina Humana</span></div>
+    <div class="chip"><b>0 PII</b><span>datos abiertos oficiales</span></div>
+  </div>
+  <div class="foot">
+    <span>Sin datos personales · fuente: datosabiertos.gob.pe</span>
+    <span class="url">unimauro.github.io/unmsm-admision-stats</span>
+  </div>
+</div>
+</body>
+</html>
