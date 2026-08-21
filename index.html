@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admisión UNMSM en cifras</title>
+<meta name="description" content="Estadísticas agregadas del proceso de admisión 2026-1 de la Universidad Nacional Mayor de San Marcos (UNMSM): postulantes, ingresantes, vacantes, notas de cierre por escuela profesional y comparación entre el examen ordinario y Pre-San Marcos.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- GA pendiente -->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Admisión San Marcos en cifras">
+<meta property="og:description" content="Notas de cierre por escuela profesional, postulantes, ingresantes y vacantes del proceso de admisión UNMSM 2026-1. Estadísticas agregadas de datos abiertos oficiales, sin datos personales.">
+<meta property="og:url" content="https://unimauro.github.io/unmsm-admision-stats/">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Admisión San Marcos en cifras">
+<meta name="twitter:description" content="Estadísticas abiertas de la admisión UNMSM 2026-1: cierres por escuela, competencia por vacante y modalidades. Sin datos personales.">
+<style>
+:root{
+  color-scheme: light;
+  --page:#faf9f7; --surface:#fffefc;
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#8a8880;
+  --grid:#e4e1da; --axis:#c6c3b8; --ring:rgba(11,11,11,.10);
+  --vino:#6b1f2a;
+  --s1:#2a78d6; --s2:#c9962e; --s3:#1baf7a;
+  --seq-250:#86b6ef; --seq-450:#1c5cab;
+  --a-violet:#4a3aa7; --a-yellow:#c98500; --a-magenta:#d0417a; --a-red:#e34948;
+  --wash-vino:rgba(107,31,42,.09);
+  --wash-s1:rgba(42,120,214,.08); --wash-s2:rgba(201,150,46,.12); --wash-s3:rgba(27,175,122,.08);
+  --wash-violet:rgba(74,58,167,.08); --wash-yellow:rgba(201,133,0,.10); --wash-magenta:rgba(208,65,122,.10);
+  --zebra:rgba(11,11,11,.028); --oro:rgba(201,150,46,.16);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink-2:#cdccc1; --muted:#9a988f;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+    --vino:#d98a95;
+    --s1:#3987e5; --s2:#e0b45c; --s3:#199e70;
+    --seq-250:#6da7ec; --seq-450:#184f95;
+    --a-violet:#9085e9; --a-yellow:#c98500; --a-magenta:#d55181;
+    --wash-vino:rgba(217,138,149,.14);
+    --wash-s1:rgba(57,135,229,.13); --wash-s2:rgba(224,180,92,.14); --wash-s3:rgba(25,158,112,.13);
+    --wash-violet:rgba(144,133,233,.13); --wash-yellow:rgba(201,133,0,.14); --wash-magenta:rgba(213,81,129,.14);
+    --zebra:rgba(255,255,255,.035); --oro:rgba(224,180,92,.16);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0d0d0d; --surface:#1a1a19;
+  --ink:#ffffff; --ink-2:#cdccc1; --muted:#9a988f;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --vino:#d98a95;
+  --s1:#3987e5; --s2:#e0b45c; --s3:#199e70;
+  --seq-250:#6da7ec; --seq-450:#184f95;
+  --a-violet:#9085e9; --a-yellow:#c98500; --a-magenta:#d55181;
+  --wash-vino:rgba(217,138,149,.14);
+  --wash-s1:rgba(57,135,229,.13); --wash-s2:rgba(224,180,92,.14); --wash-s3:rgba(25,158,112,.13);
+  --wash-violet:rgba(144,133,233,.13); --wash-yellow:rgba(201,133,0,.14); --wash-magenta:rgba(213,81,129,.14);
+  --zebra:rgba(255,255,255,.035); --oro:rgba(224,180,92,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:64px}
+body{
+  margin:0; background:var(--page); color:var(--ink);
+  font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+a{color:var(--s1)}
+
+/* ---------- layout con sidebar ---------- */
+.layout{display:block}
+.sidebar{
+  border-top:4px solid var(--vino);
+  display:none; position:fixed; top:0; left:0; bottom:0; width:236px;
+  background:var(--surface); border-right:1px solid var(--grid);
+  padding:26px 18px 18px; flex-direction:column; gap:4px; z-index:5; overflow-y:auto;
+}
+.brand{font-weight:800; font-size:20px; line-height:1.2; margin-bottom:2px}
+.brand .uni{color:var(--vino)}
+.brand-sub{font-size:12.5px; color:var(--muted); margin-bottom:18px}
+.nav-link{
+  display:flex; align-items:center; gap:9px; padding:8px 10px; border-radius:8px;
+  color:var(--ink-2); text-decoration:none; font-size:14px;
+}
+.nav-link .dot{width:8px; height:8px; border-radius:50%; flex:none}
+.nav-link:hover{background:var(--wash-vino)}
+.nav-link.active{background:var(--wash-vino); color:var(--ink); font-weight:600}
+.side-foot{margin-top:auto; padding-top:16px; font-size:12px; color:var(--muted); line-height:1.5}
+.side-foot a{color:var(--muted)}
+main{display:block; min-width:0}
+.shell{max-width:1020px; margin:0 auto; padding:0 16px}
+@media(min-width:1080px){
+  .sidebar{display:flex}
+  main{margin-left:236px}
+}
+/* nav superior móvil */
+.topnav{
+  position:sticky; top:0; z-index:6; display:flex; gap:8px; overflow-x:auto;
+  background:var(--page); border-bottom:1px solid var(--grid);
+  padding:10px 14px; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{
+  flex:none; font-size:13px; text-decoration:none; color:var(--ink-2);
+  border:1px solid var(--ring); background:var(--surface); border-radius:99px; padding:5px 12px;
+  display:inline-flex; align-items:center; gap:7px;
+}
+.topnav a .dot{width:7px; height:7px; border-radius:50%}
+@media(min-width:1080px){.topnav{display:none}}
+
+/* ---------- encabezado ---------- */
+header.site{padding:34px 0 6px}
+header.site h1{font-size:clamp(26px,5vw,38px); line-height:1.15; margin:0 0 6px}
+header.site h1 .uni{
+  background:linear-gradient(100deg, var(--vino), var(--s2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+header.site .sub{color:var(--ink-2); max-width:62ch; margin:0}
+.updated{color:var(--muted); font-size:13px; margin-top:10px}
+
+/* ---------- secciones ---------- */
+section{margin:36px 0; scroll-margin-top:16px}
+.kicker{
+  display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600;
+  letter-spacing:.04em; text-transform:uppercase; color:var(--ink-2);
+  border:1px solid var(--ring); border-radius:99px; padding:3px 12px; margin-bottom:8px;
+  background:var(--surface);
+}
+.kicker .dot{width:8px; height:8px; border-radius:50%}
+h2{font-size:clamp(20px,3.5vw,26px); margin:0 0 4px}
+.section-note{color:var(--ink-2); font-size:14px; margin:0 0 16px; max-width:72ch}
+.nota{
+  border-left:3px solid var(--nota-accent, var(--vino));
+  background:var(--nota-wash, var(--wash-vino));
+  border-radius:0 10px 10px 0; padding:12px 16px; margin:16px 0; font-size:14.5px;
+  color:var(--ink); max-width:100%;
+}
+.nota b{font-weight:650}
+.nota .nota-tag{font-size:11.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); display:block; margin-bottom:3px}
+
+/* ---------- tiles ---------- */
+.tiles{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:16px 0}
+@media(min-width:720px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{background:var(--surface); border:1px solid var(--ring); border-top:3px solid var(--tile-accent, var(--vino)); border-radius:10px; padding:13px 16px}
+.tile .label{font-size:13px; color:var(--ink-2)}
+.tile .value{font-size:clamp(23px,4vw,31px); font-weight:650; line-height:1.2; margin-top:2px}
+.tile .detail{font-size:12.5px; color:var(--muted); margin-top:2px}
+.tile.has-help{cursor:help}
+.tile .info{margin-left:5px; color:var(--muted); font-size:12px; user-select:none}
+
+/* ---------- cards ---------- */
+.cards{display:grid; grid-template-columns:1fr; gap:16px}
+.card{background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:18px 18px 12px; min-width:0; transition:border-color .15s, box-shadow .15s}
+.card:hover{border-color:rgba(125,125,140,.35); box-shadow:0 3px 16px rgba(0,0,0,.10)}
+.card h3{margin:0; font-size:16.5px}
+.card .sub{margin:2px 0 14px; font-size:13px; color:var(--ink-2)}
+.legend{display:flex; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--ink-2); margin:0 0 10px}
+.legend .key{display:inline-flex; align-items:center; gap:6px}
+.legend .swatch{width:10px; height:10px; border-radius:3px; display:inline-block}
+figure{margin:0}
+svg{display:block; width:100%; height:auto}
+.gridline{stroke:var(--grid); stroke-width:1}
+.axisline{stroke:var(--axis); stroke-width:1}
+.ticktext{fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums}
+.cattext{fill:var(--ink-2); font-size:12.5px}
+.dlabel{fill:var(--ink-2); font-size:11.5px}
+
+/* ---------- tabla plegable ---------- */
+details.tablev{margin:8px 0 4px}
+details.tablev summary{cursor:pointer; font-size:13px; color:var(--ink-2)}
+details.tablev table{border-collapse:collapse; width:100%; margin-top:10px; font-size:13.5px}
+details.tablev th{text-align:left; color:var(--ink-2); font-weight:600}
+details.tablev td,details.tablev th{padding:5px 10px 5px 0; border-bottom:1px solid var(--grid)}
+details.tablev td.num,details.tablev th.num{text-align:right; font-variant-numeric:tabular-nums}
+
+/* ---------- FAQ ---------- */
+.faq details{
+  background:var(--surface); border:1px solid var(--ring); border-radius:10px;
+  padding:13px 16px; margin-bottom:10px;
+}
+.faq summary{cursor:pointer; font-weight:600; font-size:15px}
+.faq details p{color:var(--ink-2); font-size:14.5px; margin:10px 0 2px; max-width:75ch}
+
+/* ---------- tablas visibles ---------- */
+.tabla-scroll{overflow-x:auto; margin-top:4px}
+.tabla-top{width:100%; border-collapse:collapse; font-size:14px}
+.tabla-top th{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--muted);
+  text-align:left; padding:9px 10px; border-bottom:2px solid var(--axis); white-space:nowrap}
+.tabla-top th.num{text-align:right}
+.tabla-top td{padding:8.5px 10px; border-bottom:1px solid var(--grid); line-height:1.35}
+.tabla-top td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; font-weight:600}
+.tabla-top td.rank{width:36px; text-align:center; color:var(--muted); font-variant-numeric:tabular-nums; padding-left:4px; padding-right:4px}
+.tabla-top tbody tr:nth-child(even){background:var(--zebra)}
+.tabla-top tbody tr:last-child td{border-bottom:none}
+.tabla-top tr.primero{background:var(--oro)}
+.tabla-top tr.primero td{font-weight:650}
+/* tablas con muchas columnas: no comprimir, dejar que la tira se deslice */
+.tabla-ancha .tabla-top{width:auto; min-width:100%}
+.tabla-ancha .tabla-top td:nth-child(1){white-space:nowrap}
+
+/* ---------- selector de escuelas ---------- */
+.esp-picker{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 12px}
+.esp-picker button{
+  font:600 12.5px/1 system-ui,sans-serif; padding:6px 11px; border-radius:99px; cursor:pointer;
+  border:1.5px solid var(--ring); background:var(--surface); color:var(--ink-2);
+  display:flex; align-items:center; gap:6px;
+}
+.esp-picker button .pdot{width:9px; height:9px; border-radius:50%; background:var(--axis); flex:none}
+.esp-picker button.on{color:var(--ink); border-color:var(--pick, var(--vino)); background:var(--wash-vino)}
+.esp-picker button.on .pdot{background:var(--pick, var(--vino))}
+
+/* ---------- tooltip ---------- */
+#tooltip{
+  position:fixed; pointer-events:none; z-index:10; display:none;
+  background:var(--surface); color:var(--ink); border:1px solid var(--ring);
+  border-radius:8px; padding:8px 11px; font-size:13px; line-height:1.45;
+  box-shadow:0 4px 14px rgba(0,0,0,.18); max-width:280px;
+}
+#tooltip .t-title{font-weight:600}
+#tooltip .t-row{color:var(--ink-2)}
+
+/* ---------- apoyo (yape / cafe) ---------- */
+.apoyo-card{display:flex; gap:22px; align-items:center; justify-content:space-between; flex-wrap:wrap; padding:20px 22px}
+.apoyo-text{max-width:60ch}
+.apoyo-text h3{margin:0 0 4px}
+.bmc-btn{
+  display:inline-block; margin-top:10px; background:#FFDD00; color:#111; text-decoration:none;
+  font-weight:700; font-size:14.5px; border-radius:10px; padding:10px 16px;
+}
+.bmc-btn:hover{filter:brightness(1.05)}
+.yape-box{display:flex; flex-direction:column; align-items:center; gap:6px;
+  background:var(--page); border:1px solid var(--ring); border-radius:12px; padding:12px}
+.yape-box img{width:120px; height:120px; border-radius:8px; max-width:100%}
+.yape-box span{font-size:12.5px; font-weight:700; color:#742284}
+
+footer.page-foot{margin:56px 0 96px; padding-top:18px; border-top:1px solid var(--grid); color:var(--muted); font-size:13.5px}
+footer.page-foot p{max-width:75ch}
+.loading{color:var(--muted); padding:40px 0}
+
+/* ---------- toggle de tema ---------- */
+.theme-toggle{
+  border:1px solid var(--ring); background:var(--page); color:var(--ink-2);
+  border-radius:99px; padding:5px 11px; font-size:14px; cursor:pointer; line-height:1;
+}
+.theme-toggle:hover{color:var(--ink)}
+.sidebar .theme-toggle{position:absolute; top:24px; right:16px}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" aria-label="Navegación">
+    <div class="brand"><span class="uni">UNMSM</span> en cifras</div>
+    <div class="brand-sub">Admisión · estadísticas abiertas</div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌙</button>
+    <nav id="side-nav">
+      <a class="nav-link" href="#resumen"><span class="dot" style="background:var(--vino)"></span>Resumen</a>
+      <a class="nav-link" href="#cierres"><span class="dot" style="background:var(--vino)"></span>Notas de cierre</a>
+      <a class="nav-link" href="#competencia"><span class="dot" style="background:var(--s2)"></span>Más competitivas</a>
+      <a class="nav-link" href="#modalidades"><span class="dot" style="background:var(--a-violet)"></span>Modalidades</a>
+      <a class="nav-link" href="#vacantes"><span class="dot" style="background:var(--s1)"></span>Vacantes</a>
+      <a class="nav-link" href="#faq"><span class="dot" style="background:var(--axis)"></span>Preguntas</a>
+      <a class="nav-link" href="#apoyo"><span class="dot" style="background:var(--s3)"></span>Apoya el proyecto</a>
+    </nav>
+    <div class="side-foot">
+      <span id="side-updated"></span><br>
+      Fuente: <a href="https://www.datosabiertos.gob.pe/" rel="noopener">Datos Abiertos del Estado</a><br>
+      Solo estadísticas agregadas, sin datos personales.
+    </div>
+  </aside>
+
+  <main>
+    <nav class="topnav" aria-label="Secciones">
+      <button class="theme-toggle" id="theme-toggle-m" aria-label="Cambiar tema claro/oscuro">🌙</button>
+      <a href="#resumen"><span class="dot" style="background:var(--vino)"></span>Resumen</a>
+      <a href="#cierres"><span class="dot" style="background:var(--vino)"></span>Cierres</a>
+      <a href="#competencia"><span class="dot" style="background:var(--s2)"></span>Competencia</a>
+      <a href="#modalidades"><span class="dot" style="background:var(--a-violet)"></span>Modalidades</a>
+      <a href="#vacantes"><span class="dot" style="background:var(--s1)"></span>Vacantes</a>
+      <a href="#faq"><span class="dot" style="background:var(--axis)"></span>FAQ</a>
+      <a href="#apoyo"><span class="dot" style="background:var(--s3)"></span>Apoyo</a>
+    </nav>
+
+    <div class="shell">
+      <header class="site">
+        <h1>Admisión <span class="uni">San Marcos</span> en cifras</h1>
+        <p class="sub">Estadísticas agregadas del proceso de admisión 2026-1 de la Universidad Nacional Mayor
+        de San Marcos: cuánta gente postuló a cada escuela profesional, cuántos ingresaron, cuántas vacantes
+        quedaron sin cubrir y con qué nota cerró cada carrera, por examen ordinario y por Pre-San Marcos.
+        Todo sale del dataset agregado oficial publicado como datos abiertos.</p>
+        <p class="updated" id="updated">Cargando datos…</p>
+      </header>
+
+      <div id="app" class="loading">Cargando estadísticas…</div>
+
+      <section id="apoyo" aria-label="Apoya este proyecto">
+        <div class="card apoyo-card">
+          <div class="apoyo-text">
+            <h3>☕ ¿Te sirvió este tablero?</h3>
+            <p class="sub">Es un proyecto independiente y gratuito. Puedes apoyar su mantenimiento con un café o un Yape.</p>
+            <a class="bmc-btn" href="https://buymeacoffee.com/unimauro" target="_blank" rel="noopener"
+               onclick="typeof gtag==='function'&&gtag('event','support_click',{channel:'bmc',location:'footer'})">☕ Buy me a coffee</a>
+          </div>
+          <div class="yape-box" title="Escanea con Yape">
+            <img src="yape.png" alt="QR de Yape">
+            <span>Yape</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-foot">
+        <p>Fuente: <a href="https://www.datosabiertos.gob.pe/" rel="noopener">Plataforma Nacional de Datos
+        Abiertos (datosabiertos.gob.pe)</a>, dataset agregado oficial del proceso de admisión de pregrado
+        2026-1 de la UNMSM, publicado bajo licencia abierta. Este sitio solo reorganiza y grafica esos
+        conteos.</p>
+        <p>No contiene nombres, códigos ni ningún dato personal de postulantes. Proyecto independiente,
+        sin afiliación oficial con la UNMSM; para información oficial, consulta admision.unmsm.edu.pe.</p>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<div id="tooltip" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- tema claro/oscuro ---------- */
+const savedTheme = localStorage.getItem("theme");
+if(savedTheme) document.documentElement.dataset.theme = savedTheme;
+function currentTheme(){
+  return document.documentElement.dataset.theme ||
+    (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function themeIcons(){
+  const icon = currentTheme() === "dark" ? "☀️" : "🌙";
+  document.querySelectorAll(".theme-toggle").forEach(b => b.textContent = icon);
+}
+function toggleTheme(){
+  const next = currentTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem("theme", next);
+  themeIcons();
+  if(lastStats){ const sy = scrollY; render(lastStats); scrollTo(0, sy); }
+}
+document.addEventListener("DOMContentLoaded", ()=>{
+  themeIcons();
+  document.querySelectorAll(".theme-toggle").forEach(b => b.addEventListener("click", toggleTheme));
+});
+
+/* ---------- utilidades ---------- */
+const $ = sel => document.querySelector(sel);
+const fmt = n => n==null ? "–" : Number(n).toLocaleString("es-PE");
+const fmt1 = n => n==null ? "–" : Number(n).toLocaleString("es-PE",{maximumFractionDigits:1});
+/* las notas UNMSM van sobre 2,000 y se muestran con 2 decimales, como en el dataset */
+const n2 = v => v==null ? "–" : Number(v).toLocaleString("es-PE",{minimumFractionDigits:2, maximumFractionDigits:2});
+/* porcentajes con 1 decimal fijo; por debajo de 1% hacen falta 2 para no perder la escala */
+const pct = v => v==null ? "–"
+  : (v < 1 ? n2(v) : Number(v).toLocaleString("es-PE",{minimumFractionDigits:1, maximumFractionDigits:1})) + "%";
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const NS = "http://www.w3.org/2000/svg";
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function el(tag, attrs, children){
+  const isSvg = ["svg","g","rect","path","line","circle","text","title"].includes(tag);
+  const node = isSvg ? document.createElementNS(NS, tag) : document.createElement(tag);
+  for(const k in (attrs||{})){
+    if(k === "text") node.textContent = attrs[k];
+    else if(k.startsWith("on")) node.addEventListener(k.slice(2), attrs[k]);
+    else node.setAttribute(k, attrs[k]);
+  }
+  (children||[]).forEach(c => node.appendChild(c));
+  return node;
+}
+
+/* tooltip compartido */
+const tip = $("#tooltip");
+function showTip(evt, html){
+  tip.innerHTML = html;
+  tip.style.display = "block";
+  const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if(x + w > innerWidth - 8) x = evt.clientX - w - pad;
+  if(y + h > innerHeight - 8) y = evt.clientY - h - pad;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip(){ tip.style.display = "none"; }
+
+function niceTicks(max, count){
+  if(max <= 0) return [0,1];
+  const step = Math.pow(10, Math.floor(Math.log10(max/count)));
+  const err = max/count/step;
+  const mult = err >= 5 ? 10 : err >= 2 ? 5 : err >= 1 ? 2 : 1;
+  const s = step*mult, ticks = [];
+  for(let v = 0; ; v += s){
+    ticks.push(Math.round(v*100)/100);
+    if(v >= max) break;
+  }
+  return ticks;
+}
+
+function truncate(s, n){ return s.length > n ? s.slice(0, n-1).trimEnd() + "…" : s; }
+
+/* barra horizontal con extremo derecho redondeado */
+function roundedBarH(x, y, w, h, color){
+  const r = Math.min(4, h/2, w);
+  const d = `M${x},${y} L${x+w-r},${y} Q${x+w},${y} ${x+w},${y+r} L${x+w},${y+h-r} Q${x+w},${y+h} ${x+w-r},${y+h} L${x},${y+h} Z`;
+  return el("path",{d, fill:color});
+}
+
+function tableView(headers, rows, label){
+  const thead = el("tr", null, headers.map((h,i)=>el("th",{class:i? "num":"", text:h})));
+  const body = rows.map(r => el("tr", null, r.map((c,i)=>el("td",{class:i? "num":"", text:c==null?"–":String(c)}))));
+  const table = document.createElement("table");
+  table.appendChild(el("thead",null,[thead]));
+  table.appendChild(el("tbody",null,body));
+  const det = document.createElement("details");
+  det.className = "tablev";
+  const sum = document.createElement("summary");
+  sum.textContent = label || "Ver tabla de datos";
+  det.appendChild(sum); det.appendChild(table);
+  return det;
+}
+
+/* tabla visible y estilizada; hdefs = [{t:"título", n:esNumérica}], medallas = 🥇🥈🥉 en la 1.ª columna */
+function tablaBonita(hdefs, filas, medallas){
+  const MEDAL = ["🥇","🥈","🥉"];
+  const thead = el("tr", null, hdefs.map(h=>el("th",{class:h.n?"num":"", text:h.t})));
+  const tb = filas.map((r,i)=>{
+    const tr = el("tr", null, r.map((c,j)=>{
+      const esRank = medallas && j===0;
+      return el("td",{class:(hdefs[j].n?"num":"") + (esRank?" rank":""),
+        text: esRank ? (MEDAL[i]||String(c)) : (c==null?"–":String(c))});
+    }));
+    if(medallas && i===0) tr.className = "primero";
+    return tr;
+  });
+  const t = document.createElement("table");
+  t.className = "tabla-top";
+  t.appendChild(el("thead",null,[thead]));
+  t.appendChild(el("tbody",null,tb));
+  const wrap = document.createElement("div");
+  wrap.className = "tabla-scroll";
+  wrap.appendChild(t);
+  return wrap;
+}
+
+function card(title, sub, chartNode, table, legendItems){
+  const c = document.createElement("div");
+  c.className = "card";
+  c.appendChild(el("h3",{text:title}));
+  if(sub) c.appendChild(el("p",{class:"sub",text:sub}));
+  if(legendItems && legendItems.length > 1){
+    const lg = document.createElement("p");
+    lg.className = "legend";
+    legendItems.forEach(it=>{
+      const k = document.createElement("span");
+      k.className = "key";
+      const sw = document.createElement("span");
+      sw.className = "swatch"; sw.style.background = it.color;
+      k.appendChild(sw); k.appendChild(document.createTextNode(it.label));
+      lg.appendChild(k);
+    });
+    c.appendChild(lg);
+  }
+  const fig = document.createElement("figure");
+  fig.appendChild(chartNode);
+  c.appendChild(fig);
+  if(table) c.appendChild(table);
+  return c;
+}
+
+/* ---------- barras horizontales (1 o 2 series), etiqueta a la izquierda ---------- */
+function hBars(items, opts){
+  const series = opts.series;                     // [{name,color}]
+  const W = opts.W || 920, labelW = Math.min(opts.labelW || 250, Math.round(W*0.34)), padR = W > 600 ? 64 : 46;
+  const rowH = series.length > 1 ? 46 : 27;
+  const padT = 4, padB = 8;
+  const H = padT + items.length*rowH + padB;
+  const maxV = Math.max(...items.flatMap(it=>it.values), 1);
+  const x0 = labelW + 10, plotW = W - x0 - padR;
+  const maxChars = Math.floor(labelW/6.6);
+  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`, role:"img", "aria-label":opts.aria});
+  items.forEach((it,i)=>{
+    const top = padT + i*rowH;
+    svg.appendChild(el("text",{x:labelW, y:top+rowH/2+4, "text-anchor":"end", class:"cattext", text:truncate(it.label, maxChars)}));
+    const bh = 16;
+    const groupH = series.length*bh + (series.length-1)*2;
+    it.values.forEach((v,si)=>{
+      const y = top + (rowH-groupH)/2 + si*(bh+2);
+      const w = Math.max((v/maxV)*plotW, v>0 ? 2 : 0);
+      if(v > 0) svg.appendChild(roundedBarH(x0, y, w, bh, series[si].color));
+      svg.appendChild(el("text",{x:x0+w+6, y:y+bh/2+4, class:"dlabel", text:opts.fmtVal ? opts.fmtVal(v,it,si) : fmt(v)}));
+    });
+    const hit = el("rect",{x:0, y:top, width:W, height:rowH, fill:"transparent",
+      onmousemove:e=>showTip(e, opts.tip(it)),
+      onmouseleave:hideTip});
+    svg.appendChild(hit);
+  });
+  return svg;
+}
+
+/* ---------- líneas (evolución) ---------- */
+function lineChart(seriesList, labels, opts){
+  const W = opts.W || 640, padL = 48, padR = 12, padT = 14, padB = 30, plotH = 190;
+  const H = padT + plotH + padB;
+  const vals = seriesList.flatMap(s=>s.values.filter(v=>v!=null));
+  const maxV = Math.max(...vals, 1);
+  let ticks, yMin, yMax;
+  if(opts.yMin != null){
+    /* dominio Y explícito: un eje desde 0 aplastaría las diferencias entre cierres */
+    yMin = opts.yMin; yMax = opts.yMax != null ? opts.yMax : Math.ceil(maxV);
+    const nT = 4, stepT = (yMax - yMin)/nT;
+    ticks = Array.from({length:nT+1}, (_,i)=>Math.round((yMin+i*stepT)*10)/10);
+  } else {
+    ticks = niceTicks(maxV, 4); yMin = 0; yMax = ticks[ticks.length-1];
+  }
+  const fmtV = opts.fmtVal || fmt;
+  const lblFmt = opts.lblFmt || (lb => lb);
+  const plotW = W - padL - padR;
+  const X = i => labels.length === 1 ? padL + plotW/2 : padL + (i/(labels.length-1))*plotW;
+  const Y = v => padT + plotH - ((v - yMin)/((yMax - yMin) || 1))*plotH;
+  const svg = el("svg",{viewBox:`0 0 ${W} ${H}`, role:"img", "aria-label":opts.aria});
+  ticks.forEach(t=>{
+    svg.appendChild(el("line",{x1:padL, x2:W-padR, y1:Y(t), y2:Y(t), class:"gridline"}));
+    svg.appendChild(el("text",{x:padL-6, y:Y(t)+4, "text-anchor":"end", class:"ticktext", text:fmtV(t)}));
+  });
+  svg.appendChild(el("line",{x1:padL, x2:W-padR, y1:padT+plotH, y2:padT+plotH, class:"axisline"}));
+  labels.forEach((lb,i)=>{
+    if(labels.length > 8 && i % Math.ceil(labels.length/8) !== 0 && i !== labels.length-1) return;
+    svg.appendChild(el("text",{x:X(i), y:padT+plotH+18, "text-anchor":"middle", class:"ticktext", text:lblFmt(lb)}));
+  });
+  seriesList.forEach(s=>{
+    if(labels.length > 1){
+      const d = s.values.map((v,i)=>v==null?null:`${X(i)},${Y(v)}`).filter(Boolean).map((seg,j)=>(j===0?"M":"L")+seg).join(" ");
+      svg.appendChild(el("path",{d, fill:"none", stroke:s.color, "stroke-width":2, "stroke-linejoin":"round", "stroke-linecap":"round"}));
+    }
+    s.values.forEach((v,i)=>{
+      if(v==null) return;
+      svg.appendChild(el("circle",{cx:X(i), cy:Y(v), r:6, fill:css("--surface")}));
+      svg.appendChild(el("circle",{cx:X(i), cy:Y(v), r:4, fill:s.color}));
+    });
+  });
+  labels.forEach((lb,i)=>{
+    const hit = el("rect",{x:X(i)-Math.max(plotW/labels.length/2,12), y:padT, width:Math.max(plotW/labels.length,24), height:plotH, fill:"transparent",
+      onmousemove:e=>showTip(e,`<div class="t-title">${esc(lb)}</div>` +
+        seriesList.map(s=>s.values[i]==null?"":`<div class="t-row">${esc(s.name)}: ${fmtV(s.values[i])}</div>`).join("")),
+      onmouseleave:hideTip});
+    svg.appendChild(hit);
+  });
+  return svg;
+}
+
+function tile(label, value, detail, accent, help){
+  const t = document.createElement("div");
+  t.className = "tile";
+  if(accent) t.style.setProperty("--tile-accent", accent);
+  const lab = el("div",{class:"label",text:label});
+  if(help){
+    t.classList.add("has-help");
+    lab.appendChild(el("span",{class:"info", text:"ⓘ", "aria-hidden":"true"}));
+    t.setAttribute("aria-label", label + ". " + help);
+    const html = `<div class="t-title">${esc(label)}</div><div class="t-row">${esc(help)}</div>`;
+    t.addEventListener("mousemove", e=>showTip(e, html));
+    t.addEventListener("mouseleave", hideTip);
+  }
+  t.appendChild(lab);
+  t.appendChild(el("div",{class:"value",text:value}));
+  if(detail) t.appendChild(el("div",{class:"detail",text:detail}));
+  return t;
+}
+/* en táctil el tooltip queda pegado tras el tap: ocultarlo al tocar fuera de un tile */
+document.addEventListener("click", e=>{ if(!e.target.closest(".tile.has-help")) hideTip(); });
+
+const KICKER_WASH = {"--s1":"--wash-s1","--s2":"--wash-s2","--s3":"--wash-s3","--a-violet":"--wash-violet",
+  "--a-yellow":"--wash-yellow","--a-magenta":"--wash-magenta","--a-red":"--wash-s2","--vino":"--wash-vino"};
+function section(id, kicker, accentVar, title, note){
+  const s = document.createElement("section");
+  s.id = id;
+  const k = document.createElement("p");
+  k.className = "kicker";
+  if(KICKER_WASH[accentVar]) k.style.background = `var(${KICKER_WASH[accentVar]})`;
+  const dot = document.createElement("span");
+  dot.className = "dot"; dot.style.background = `var(${accentVar})`;
+  k.appendChild(dot); k.appendChild(document.createTextNode(kicker));
+  s.appendChild(k);
+  s.appendChild(el("h2",{text:title}));
+  if(note) s.appendChild(el("p",{class:"section-note",text:note}));
+  return s;
+}
+
+function nota(accentVar, washVar, html){
+  const n = document.createElement("div");
+  n.className = "nota";
+  n.style.setProperty("--nota-accent", `var(${accentVar})`);
+  n.style.setProperty("--nota-wash", `var(${washVar})`);
+  n.innerHTML = '<span class="nota-tag">📌 Nota</span>' + html;
+  return n;
+}
+
+/* nombres largos: las escuelas UNMSM repiten prefijos y arrastran la sede al final */
+const ESC_SHORT = s => String(s)
+  .replace("INGENIERÍA ", "ING. ")
+  .replace("INGENIERIA ", "ING. ")
+  .replace("CIENCIAS DE LA ", "CS. DE LA ")
+  .replace("ADMINISTRACIÓN DE ", "ADM. DE ")
+  .replace("EDUCACIÓN ", "EDUC. ")
+  .replace("TECNOLOGÍA MÉDICA", "TEC. MED.")
+  .replace(" - S.J.L", " (SJL)")
+  .replace(" - HUARAL", " (Huaral)");
+
+/* modalidades tal como vienen en el dataset */
+const M_EBR = "EBR/EBA (examen ordinario)";
+const M_CEP = "Pre-San Marcos (CEPREUNMSM)";
+const M_CORTO = {[M_EBR]:"EBR/EBA (ordinario)", [M_CEP]:"Pre-San Marcos"};
+
+/* mapa de calor de los cierres: vino, con tono claro/oscuro según el tema */
+function heatRGBA(t){
+  return currentTheme() === "dark"
+    ? `rgba(217,138,149,${t.toFixed(3)})`
+    : `rgba(107,31,42,${t.toFixed(3)})`;
+}
+
+/* ---------- render principal ---------- */
+let lastStats = null;
+
+function render(stats){
+  const app = $("#app");
+  hideTip();
+  app.className = ""; app.innerHTML = "";
+  const appW = Math.max(app.clientWidth || 320, 300);
+  const fullW = Math.min(1010, appW) - 38;
+
+  const gen = new Date(stats.generado_utc);
+  const updTxt = "Actualizado: " +
+    gen.toLocaleString("es-PE",{dateStyle:"long", timeStyle:"short", timeZone:"America/Lima"}) + " (Lima)";
+  $("#updated").textContent = updTxt;
+  const sideUpd = $("#side-updated"); if(sideUpd) sideUpd.textContent = updTxt;
+
+  const PROC = stats.proceso || "2026-1";
+  const T = stats.totales || {};
+  const ESC = stats.por_escuela || {};
+  const MOD = stats.por_modalidad || {};
+  const ESCALA = stats.escala || {};
+  const MAXT = ESCALA.max_teorico || 2000;
+
+  const nombres = Object.keys(ESC);
+  const post = T.postulantes || 0, ing = T.ingresantes || 0, vac = T.vacantes || 0;
+  const pAdm = post ? 100*ing/post : null;
+  const modDe = (e, m) => (e.por_modalidad || {})[m] || null;
+  const cierre = (e, m) => { const d = modDe(e, m); return d && d.nota_min != null ? d.nota_min : null; };
+  const notaMax = e => {
+    const vs = Object.values(e.por_modalidad || {}).map(d=>d.nota_max).filter(v=>v!=null);
+    return vs.length ? Math.max(...vs) : null;
+  };
+
+  /* ===== 1. Resumen ===== */
+  const s1 = section("resumen", "Resumen", "--vino",
+    "El proceso " + PROC + " de un vistazo",
+    "Las cifras del proceso de admisión " + PROC + " tal como las publica el dataset oficial: " +
+    nombres.length + " escuelas profesionales, dos vías de ingreso y notas en la escala del examen San Marcos, " +
+    "sobre " + fmt(MAXT) + " puntos. Pasa el cursor por el ⓘ de cada cifra para saber cómo se calcula.");
+  const t1 = document.createElement("div"); t1.className = "tiles";
+
+  t1.appendChild(tile("Postulantes · " + PROC, fmt(post), "en las dos modalidades", "var(--vino)",
+    "Cuántas personas rindieron el proceso " + PROC + ", sumando el examen ordinario (EBR/EBA) y Pre-San Marcos."));
+  t1.appendChild(tile("Ingresantes · " + PROC, fmt(ing), pct(pAdm) + " de admisión", "var(--s3)",
+    "Cuántas alcanzaron vacante. El porcentaje es ingresantes ÷ postulantes: qué proporción del total logró ingresar."));
+  const sinCubrir = vac - ing;
+  t1.appendChild(tile("Vacantes ofertadas", fmt(vac),
+    sinCubrir > 0 ? fmt(sinCubrir) + " quedaron sin cubrir" : "cubiertas al " + pct(vac?100*ing/vac:null), "var(--s1)",
+    sinCubrir > 0
+      ? "Vacantes convocadas para " + PROC + ". Ingresaron " + fmt(ing) + " personas, es decir " + fmt(sinCubrir) +
+        " menos que las vacantes: no toda vacante encuentra a alguien que apruebe. Se cubrió el " +
+        pct(vac?100*ing/vac:null) + " de la oferta."
+      : "Vacantes convocadas para el proceso " + PROC + "."));
+
+  const maxObs = ESCALA.max_observado != null ? ESCALA.max_observado : null;
+  const escMax = nombres
+    .map(k=>[k, notaMax(ESC[k])])
+    .filter(([,v])=>v!=null)
+    .sort((a,b)=>b[1]-a[1])[0];
+  t1.appendChild(tile("Nota más alta · " + PROC, n2(maxObs != null ? maxObs : (escMax && escMax[1])),
+    escMax ? ESC_SHORT(escMax[0]) : "", "var(--s2)",
+    "La nota más alta de todo el proceso, en la escala del examen UNMSM sobre " + fmt(MAXT) + " puntos. " +
+    "La universidad no publica una conversión a escala vigesimal, así que aquí verás siempre el puntaje directo."));
+
+  t1.appendChild(tile("1 de cada", ing ? fmt(Math.round(post/ing)) : "–", "postulantes ingresó", "var(--a-violet)",
+    "Otra forma de leer el porcentaje de admisión: por cada N postulantes del proceso, uno consiguió vacante."));
+
+  /* la escuela más demandada del proceso: el dato que todos buscan */
+  const topDem = nombres
+    .map(k=>({name:k, d:ESC[k]}))
+    .sort((a,b)=>(b.d.postulantes||0)-(a.d.postulantes||0))[0];
+  if(topDem){
+    const td = topDem.d;
+    t1.appendChild(tile(ESC_SHORT(topDem.name),
+      td.ingresantes ? "1 de cada " + fmt(Math.round(td.postulantes/td.ingresantes)) : "–",
+      fmt(td.postulantes) + " postulantes · " + fmt(td.vacantes) + " vacantes", "var(--a-red)",
+      "La escuela más demandada del proceso: " + fmt(td.postulantes) + " postulantes por " + fmt(td.vacantes) +
+      " vacantes (" + fmt(td.ingresantes) + " ingresantes, " + pct(100*td.ingresantes/td.postulantes) + " de admisión)."));
+  }
+
+  t1.appendChild(tile("Escuelas profesionales", fmt(nombres.length), "con postulantes en " + PROC, "var(--s1)",
+    "Cuántas escuelas profesionales de pregrado aparecen en el dataset del proceso " + PROC + ", " +
+    "incluidas las sedes de Huaral y San Juan de Lurigancho."));
+
+  const cierreTop = nombres
+    .map(k=>[k, cierre(ESC[k], M_EBR)])
+    .filter(([,v])=>v!=null)
+    .sort((a,b)=>b[1]-a[1])[0];
+  if(cierreTop){
+    t1.appendChild(tile("Cierre más alto · " + PROC, n2(cierreTop[1]), ESC_SHORT(cierreTop[0]) + " · EBR/EBA", "var(--vino)",
+      "La nota de cierre más alta del proceso por el examen ordinario: la del último ingresante de la escuela más exigente."));
+  }
+  s1.appendChild(t1);
+
+  s1.appendChild(nota("--vino","--wash-vino",
+    "En <b>" + PROC + "</b> postularon <b>" + fmt(post) + "</b> personas por <b>" + fmt(vac) + "</b> vacantes e " +
+    "ingresaron <b>" + fmt(ing) + "</b>: una tasa de admisión de <b>" + pct(pAdm) + "</b>, es decir " +
+    "<b>1 de cada " + (ing ? fmt(Math.round(post/ing)) : "–") + "</b>. " +
+    (sinCubrir > 0 ? "Y aun así <b>" + fmt(sinCubrir) + " vacantes quedaron sin cubrir</b>: la competencia se concentra en " +
+      "unas pocas escuelas mientras otras no llenan su cupo. " : "") +
+    (topDem ? "El caso extremo es <b>" + ESC_SHORT(topDem.name) + "</b>: <b>" + fmt(topDem.d.postulantes) + "</b> postulantes " +
+      "para <b>" + fmt(topDem.d.vacantes) + "</b> vacantes, uno de cada " +
+      fmt(Math.round(topDem.d.postulantes/topDem.d.ingresantes)) + "." : "")));
+  app.appendChild(s1);
+
+  /* ===== 2. Notas de cierre por escuela ===== */
+  const s2 = section("cierres", "Notas de cierre", "--vino",
+    "Nota mínima de ingreso por escuela",
+    "La nota de cierre es la del último ingresante de esa escuela por esa vía: el mínimo con el que alguien " +
+    "efectivamente entró en " + PROC + ". No es una nota mínima fijada de antemano — sube o baja según cuántos " +
+    "postulen, qué tan bien les vaya y cuántas vacantes haya. Las notas van sobre " + fmt(MAXT) + " puntos.");
+  const cards2 = document.createElement("div"); cards2.className = "cards";
+
+  const filasCierre = nombres
+    .map(k=>{
+      const e = ESC[k];
+      return {name:k, vac:e.vacantes||0, post:e.postulantes||0,
+        ebr:cierre(e, M_EBR), cep:cierre(e, M_CEP), max:notaMax(e)};
+    })
+    .sort((a,b)=>{
+      if(a.ebr == null && b.ebr == null) return a.name.localeCompare(b.name, "es");
+      if(a.ebr == null) return 1;
+      if(b.ebr == null) return -1;
+      return b.ebr - a.ebr;
+    });
+
+  const tabla2 = tablaBonita(
+    [{t:"Escuela"},{t:"Vacantes", n:1},{t:"Postulantes", n:1},
+     {t:"Cierre EBR/EBA", n:1},{t:"Cierre Pre-San Marcos", n:1},{t:"Máx", n:1}],
+    filasCierre.map(f=>[f.name, fmt(f.vac), fmt(f.post), n2(f.ebr), n2(f.cep), n2(f.max)]), false);
+  tabla2.classList.add("tabla-ancha");
+  /* heatmap sobre las dos columnas de cierre, con una escala común a ambas vías:
+     así se ve de un vistazo cuándo Pre-San Marcos cerró más alto que el examen */
+  {
+    const trs = [...tabla2.querySelectorAll("tbody tr")];
+    const vals = filasCierre.flatMap(f=>[f.ebr, f.cep]).filter(v=>v!=null);
+    const lo = Math.min(...vals), hi = Math.max(...vals);
+    if(vals.length && hi > lo){
+      trs.forEach((tr,i)=>{
+        [[3, filasCierre[i].ebr],[4, filasCierre[i].cep]].forEach(([col,v])=>{
+          if(v != null) tr.children[col].style.background = heatRGBA(0.05 + 0.5*(v-lo)/(hi-lo));
+        });
+      });
+    }
+  }
+  cards2.appendChild(card("Cierre por escuela y modalidad · " + PROC,
+    "Las " + filasCierre.length + " escuelas ordenadas por la nota de cierre del examen ordinario, de mayor a menor. " +
+    "El fondo funciona como mapa de calor sobre las dos columnas de cierre: mientras más intenso el vino, más alta la nota. " +
+    "“–” significa que esa escuela no tuvo ingresantes por esa vía. La columna “Máx” es la mejor nota de la escuela. " +
+    "Desliza la tabla horizontalmente si no entra en pantalla.",
+    tabla2));
+  s2.appendChild(cards2);
+
+  const conAmbas = filasCierre.filter(f=>f.ebr != null && f.cep != null);
+  const cepMayor = conAmbas.filter(f=>f.cep > f.ebr);
+  const med = filasCierre.find(f=>f.ebr != null && f.cep != null && f.cep > f.ebr) || null;
+  s2.appendChild(nota("--vino","--wash-vino",
+    "Conviene mirar las dos columnas juntas: en <b>" + fmt(cepMayor.length) + "</b> de las " + fmt(conAmbas.length) +
+    " escuelas que abren ambas vías, el cierre por <b>Pre-San Marcos fue más alto</b> que por examen ordinario. " +
+    (med ? "En <b>" + ESC_SHORT(med.name) + "</b> la diferencia es enorme: <b>" + n2(med.cep) + "</b> por Pre-San Marcos " +
+      "frente a <b>" + n2(med.ebr) + "</b> por el examen. " : "") +
+    "La razón es aritmética, no académica: Pre-San Marcos reserva muy pocas vacantes por escuela, así que " +
+    "el corte se dispara. Entrar “por el CEPRE” no es necesariamente el camino fácil."));
+  app.appendChild(s2);
+
+  /* ===== 3. Las escuelas más competitivas ===== */
+  const MIN_POST = 100;
+  const s3 = section("competencia", "Competencia", "--s2",
+    "Las escuelas más competitivas",
+    "Porcentaje de admisión por escuela: ingresantes ÷ postulantes. Mientras más corta la barra, más difícil fue entrar. " +
+    "El gráfico muestra las 20 más exigentes entre las escuelas con al menos " + MIN_POST + " postulantes, " +
+    "para que una escuela pequeña no distorsione el ranking; la tabla desplegable trae las " + nombres.length + ".");
+  const compAll = nombres
+    .map(k=>{
+      const e = ESC[k];
+      return {name:k, label:ESC_SHORT(k), vac:e.vacantes||0, post:e.postulantes||0, ing:e.ingresantes||0,
+        ebr:cierre(e, M_EBR), values:[e.postulantes ? 100*(e.ingresantes||0)/e.postulantes : 0]};
+    })
+    .sort((a,b)=>a.values[0]-b.values[0]);
+  const comp20 = compAll.filter(it=>it.post >= MIN_POST).slice(0, 20);
+  const cards3 = document.createElement("div"); cards3.className = "cards";
+  if(comp20.length){
+    cards3.appendChild(card("Porcentaje de admisión por escuela · " + PROC,
+      "De cada 100 postulantes a esa escuela, cuántos ingresaron. Ordenado de la más difícil a la menos difícil. " +
+      "Pasa el cursor para ver los números absolutos y la nota de cierre del examen ordinario.",
+      hBars(comp20, {
+        W: fullW, labelW: 240,
+        series:[{name:"% de admisión", color:css("--s2")}],
+        aria:"Porcentaje de admisión por escuela profesional en el proceso " + PROC,
+        fmtVal: v => pct(v),
+        tip: it => `<div class="t-title">${esc(it.name)}</div>
+          <div class="t-row">${fmt(it.post)} postulantes · ${fmt(it.ing)} ingresantes · ${fmt(it.vac)} vacantes</div>
+          <div class="t-row">Admisión: ${pct(it.values[0])} · 1 de cada ${it.ing?fmt(Math.round(it.post/it.ing)):"–"}</div>
+          ${it.ebr!=null?`<div class="t-row">Cierre EBR/EBA: ${n2(it.ebr)}</div>`:""}`
+      }),
+      tableView(["Escuela","Vacantes","Postulantes","Ingresantes","% de admisión","1 de cada","Cierre EBR/EBA"],
+        compAll.map(it=>[it.name, fmt(it.vac), fmt(it.post), fmt(it.ing), pct(it.values[0]),
+          it.ing ? fmt(Math.round(it.post/it.ing)) : "–", n2(it.ebr)]),
+        "Ver las " + nombres.length + " escuelas"),
+      [{label:"% de admisión", color:css("--s2")}]));
+  }
+  s3.appendChild(cards3);
+  if(comp20.length){
+    const dura = comp20[0];
+    const suave = compAll.filter(it=>it.post >= MIN_POST).slice(-1)[0];
+    s3.appendChild(nota("--s2","--wash-s2",
+      "<b>" + ESC_SHORT(dura.name) + "</b> fue la más difícil de " + PROC + ": <b>" + fmt(dura.post) + "</b> postulantes " +
+      "por <b>" + fmt(dura.vac) + "</b> vacantes (<b>" + pct(dura.values[0]) + "</b> de admisión, 1 de cada " +
+      fmt(Math.round(dura.post/dura.ing)) + "). " +
+      (suave ? "En el otro extremo, <b>" + ESC_SHORT(suave.name) + "</b> admitió al <b>" + pct(suave.values[0]) + "</b> " +
+        "de sus postulantes. " : "") +
+      "El examen es el mismo para todas: lo que cambia es cuánta gente elige cada escuela y cuántas vacantes hay."));
+  }
+  app.appendChild(s3);
+
+  /* ===== 4. Modalidades ===== */
+  const s4 = section("modalidades", "Modalidades", "--a-violet",
+    "Las dos vías de ingreso",
+    "En " + PROC + " se entra a San Marcos por dos caminos: el examen de admisión ordinario, al que se presentan " +
+    "quienes terminaron la Educación Básica Regular o Alternativa (EBR/EBA), y Pre-San Marcos (CEPREUNMSM), " +
+    "el centro preuniversitario de la propia universidad, que reserva un bloque aparte de vacantes.");
+  const items4 = Object.entries(MOD)
+    .map(([m,d])=>({name:m, label:M_CORTO[m] || m, d, values:[d.postulantes||0, d.ingresantes||0]}))
+    .sort((a,b)=>b.values[1]-a.values[1]);
+  const cards4 = document.createElement("div"); cards4.className = "cards";
+  if(items4.length){
+    cards4.appendChild(card("Postulantes e ingresantes por modalidad · " + PROC,
+      "Las barras están a la misma escala. El examen ordinario mueve más de siete veces la gente que mueve " +
+      "Pre-San Marcos, pero, como se ve en el tooltip y en la tabla, la proporción que ingresa es parecida en ambas vías.",
+      hBars(items4, {
+        W: fullW, labelW: 190,
+        series:[{name:"Postulantes", color:css("--a-violet")},{name:"Ingresantes", color:css("--s3")}],
+        aria:"Postulantes e ingresantes por modalidad de admisión UNMSM " + PROC,
+        tip: it => `<div class="t-title">${esc(it.name)}</div>
+          <div class="t-row">${fmt(it.d.postulantes)} postulantes · ${fmt(it.d.ingresantes)} ingresantes</div>
+          <div class="t-row">${fmt(it.d.vacantes)} vacantes ofertadas</div>
+          <div class="t-row">Admisión: ${it.d.postulantes?pct(100*it.d.ingresantes/it.d.postulantes):"–"} · 1 de cada ${it.d.ingresantes?fmt(Math.round(it.d.postulantes/it.d.ingresantes)):"–"}</div>`
+      }),
+      tablaBonita([{t:"Modalidad"},{t:"Vacantes", n:1},{t:"Postulantes", n:1},{t:"Ingresantes", n:1},
+                   {t:"% admisión", n:1},{t:"% de los ingresantes", n:1}],
+        items4.map(it=>[it.name, fmt(it.d.vacantes), fmt(it.d.postulantes), fmt(it.d.ingresantes),
+          it.d.postulantes ? pct(100*it.d.ingresantes/it.d.postulantes) : "–",
+          ing ? pct(100*it.d.ingresantes/ing) : "–"]), false),
+      [{label:"Postulantes", color:css("--a-violet")},{label:"Ingresantes", color:css("--s3")}]));
+  }
+  s4.appendChild(cards4);
+  const ebrT = MOD[M_EBR], cepT = MOD[M_CEP];
+  if(ebrT && cepT && ing){
+    const aEbr = 100*ebrT.ingresantes/ebrT.postulantes, aCep = 100*cepT.ingresantes/cepT.postulantes;
+    s4.appendChild(nota("--a-violet","--wash-violet",
+      "El <b>examen ordinario</b> aportó <b>" + fmt(ebrT.ingresantes) + "</b> ingresantes (" +
+      pct(100*ebrT.ingresantes/ing) + " del total) y <b>Pre-San Marcos</b> <b>" + fmt(cepT.ingresantes) + "</b> (" +
+      pct(100*cepT.ingresantes/ing) + "). Las tasas de admisión son casi idénticas: <b>" + pct(aEbr) + "</b> por examen " +
+      "frente a <b>" + pct(aCep) + "</b> por Pre-San Marcos" +
+      (aCep < aEbr ? ", ligeramente más baja esta última" : "") + ". " +
+      "Pre-San Marcos no es un atajo: reparte pocas vacantes entre postulantes que ya se están preparando en la propia UNMSM."));
+  }
+  app.appendChild(s4);
+
+  /* ===== 5. Vacantes ===== */
+  const s5 = section("vacantes", "Vacantes", "--s1",
+    "¿Se llenaron las vacantes?",
+    "Una vacante convocada no es una vacante ocupada: si nadie alcanza el puntaje necesario, la plaza se queda vacía. " +
+    "Aquí están las escuelas donde eso pasó en " + PROC + ", ordenadas por cuántos cupos quedaron libres.");
+  const vacRows = nombres.map(k=>{
+    const e = ESC[k];
+    return {name:k, label:ESC_SHORT(k), vac:e.vacantes||0, ing:e.ingresantes||0, post:e.postulantes||0,
+      dif:(e.ingresantes||0)-(e.vacantes||0)};
+  });
+  const libres = vacRows.filter(r=>r.dif < 0).sort((a,b)=>a.dif-b.dif);
+  const llenas = vacRows.filter(r=>r.dif === 0);
+  const sobre = vacRows.filter(r=>r.dif > 0).sort((a,b)=>b.dif-a.dif);
+  const cards5 = document.createElement("div"); cards5.className = "cards";
+  const top15 = libres.slice(0, 15).map(r=>Object.assign({}, r, {values:[r.vac, r.ing]}));
+  if(top15.length){
+    cards5.appendChild(card("Las 15 escuelas con más vacantes sin cubrir · " + PROC,
+      "La barra azul son las vacantes convocadas y la verde los ingresantes efectivos; la diferencia entre ambas " +
+      "es cuánto quedó libre. Predominan las ciencias básicas, las ingenierías especializadas y las sedes fuera " +
+      "de Lima. En algunas se presentó poca gente, pero en otras no: Ingeniería Nuclear tuvo 161 postulantes " +
+      "para 22 vacantes y aun así solo 13 alcanzaron la nota necesaria.",
+      hBars(top15, {
+        W: fullW, labelW: 240,
+        series:[{name:"Vacantes", color:css("--s1")},{name:"Ingresantes", color:css("--s3")}],
+        aria:"Vacantes convocadas frente a ingresantes en las escuelas con cupos sin cubrir",
+        tip: it => `<div class="t-title">${esc(it.name)}</div>
+          <div class="t-row">${fmt(it.vac)} vacantes · ${fmt(it.ing)} ingresantes</div>
+          <div class="t-row">Quedaron ${fmt(-it.dif)} sin cubrir (${pct(it.vac?100*(-it.dif)/it.vac:null)} de la oferta)</div>
+          <div class="t-row">${fmt(it.post)} postulantes</div>`
+      }),
+      tableView(["Escuela","Vacantes","Ingresantes","Sin cubrir","% sin cubrir","Postulantes"],
+        libres.map(r=>[r.name, fmt(r.vac), fmt(r.ing), fmt(-r.dif),
+          r.vac ? pct(100*(-r.dif)/r.vac) : "–", fmt(r.post)]),
+        "Ver las " + libres.length + " escuelas con cupos libres"),
+      [{label:"Vacantes", color:css("--s1")},{label:"Ingresantes", color:css("--s3")}]));
+  }
+  if(sobre.length){
+    cards5.appendChild(card("El otro lado: escuelas que admitieron más de lo convocado",
+      "Un puñado de escuelas cerró con más ingresantes que vacantes ofertadas, normalmente por empates en el último " +
+      "puesto o por reajustes de cupos entre modalidades.",
+      hBars(sobre.map(r=>Object.assign({}, r, {values:[r.vac, r.ing]})), {
+        W: fullW, labelW: 240,
+        series:[{name:"Vacantes", color:css("--s1")},{name:"Ingresantes", color:css("--s3")}],
+        aria:"Escuelas con más ingresantes que vacantes convocadas",
+        tip: it => `<div class="t-title">${esc(it.name)}</div>
+          <div class="t-row">${fmt(it.vac)} vacantes · ${fmt(it.ing)} ingresantes (+${fmt(it.dif)})</div>
+          <div class="t-row">${fmt(it.post)} postulantes</div>`
+      }),
+      null,
+      [{label:"Vacantes", color:css("--s1")},{label:"Ingresantes", color:css("--s3")}]));
+  }
+  s5.appendChild(cards5);
+  s5.appendChild(nota("--s1","--wash-s1",
+    "En total se convocaron <b>" + fmt(vac) + "</b> vacantes y se cubrieron <b>" + fmt(ing) + "</b>: el " +
+    "<b>" + pct(vac?100*ing/vac:null) + "</b> de la oferta. <b>" + fmt(libres.length) + "</b> de las " +
+    fmt(nombres.length) + " escuelas terminaron con cupos libres, " + fmt(llenas.length) + " llenaron exactamente " +
+    "su cuota y " + fmt(sobre.length) + " admitieron por encima de lo convocado. " +
+    "Dicho de otro modo: mientras miles de personas se quedaban fuera de Medicina o Ingeniería de Sistemas, " +
+    "más de trescientas plazas de otras escuelas se quedaban sin dueño."));
+  app.appendChild(s5);
+
+  /* ===== 6. Preguntas ===== */
+  const s6 = section("faq", "Preguntas", "--axis",
+    "Preguntas frecuentes",
+    "De dónde salen estos números, qué significan exactamente y qué no puedes concluir de ellos.");
+  const faqWrap = document.createElement("div");
+  faqWrap.className = "faq";
+  const faqs = [
+    ["¿De dónde salen estos datos?",
+     "Del dataset agregado oficial del proceso de admisión de pregrado 2026-1 de la UNMSM publicado en la Plataforma " +
+     "Nacional de Datos Abiertos (datosabiertos.gob.pe) bajo licencia abierta. Viene ya agregado por escuela y modalidad: " +
+     "vacantes, postulantes, ingresantes y las notas máxima y mínima de cada grupo. Este tablero solo lo reorganiza y lo grafica."],
+    ["¿Hay datos personales aquí?",
+     "No. El dataset de origen no contiene información individual: son conteos y estadísticas por escuela profesional. " +
+     "No hay nombres, DNI, códigos de postulante ni resultados individuales, y este sitio no añade ninguno."],
+    ["¿Qué es la “nota de cierre”?",
+     "Es la nota del último ingresante de una escuela por una modalidad: el mínimo con el que alguien efectivamente entró " +
+     "en 2026-1. No es una nota mínima fijada por la universidad. Depende de cuánta gente postule, de cómo le vaya y de " +
+     "cuántas vacantes haya, así que cambia en cada proceso."],
+    ["¿Por qué las notas no están sobre 20?",
+     "Porque el examen de San Marcos se califica sobre " + fmt(MAXT) + " puntos (la nota más alta observada en 2026-1 fue " +
+     n2(maxObs) + ") y la universidad no publica una tabla de conversión vigesimal oficial. Convertir por regla de tres " +
+     "daría una nota que San Marcos nunca ha usado, así que aquí verás siempre el puntaje directo, con dos decimales."],
+    ["¿Qué diferencia hay entre EBR/EBA y Pre-San Marcos?",
+     "EBR/EBA es el examen de admisión ordinario, al que se presenta quien terminó la Educación Básica Regular o Alternativa. " +
+     "Pre-San Marcos (CEPREUNMSM) es el centro preuniversitario de la propia universidad: sus estudiantes acceden por un " +
+     "bloque de vacantes reservado, con su propio cuadro de méritos. Son dos concursos separados, cada uno con su nota de cierre."],
+    ["¿Por qué solo aparece el proceso 2026-1?",
+     "Porque es el único proceso publicado como dataset agregado en datos abiertos hasta ahora. En cuanto se publiquen " +
+     "procesos anteriores o el 2026-2, este tablero incorporará la serie histórica y podrá compararlos."],
+    ["El porcentaje de admisión, ¿es mi probabilidad de ingresar?",
+     "No. Es una estadística descriptiva de lo que ya pasó: qué proporción de postulantes ingresó en 2026-1. Tu resultado " +
+     "depende de tu preparación, de la modalidad por la que postules y de contra quién compitas ese día en particular."],
+    ["¿Es una página oficial de la UNMSM?",
+     "No. Es un proyecto independiente de datos abiertos, sin afiliación con la universidad. Para trámites, cronogramas, " +
+     "vacantes y resultados oficiales, consulta admision.unmsm.edu.pe."],
+  ];
+  faqs.forEach(([q,a])=>{
+    const d = document.createElement("details");
+    d.appendChild(el("summary",{text:q}));
+    d.appendChild(el("p",{text:a}));
+    faqWrap.appendChild(d);
+  });
+  s6.appendChild(faqWrap);
+  app.appendChild(s6);
+
+  markActiveNav();
+}
+
+/* ---------- nav activa ---------- */
+let navObserver = null;
+function markActiveNav(){
+  if(typeof IntersectionObserver === "undefined") return;
+  if(navObserver) navObserver.disconnect();
+  const links = [...document.querySelectorAll(".nav-link")];
+  const byId = {}; links.forEach(l => byId[l.getAttribute("href").slice(1)] = l);
+  navObserver = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting){
+        links.forEach(l => l.classList.remove("active"));
+        const l = byId[en.target.id];
+        if(l) l.classList.add("active");
+      }
+    });
+  }, {rootMargin: "-20% 0px -70% 0px"});
+  document.querySelectorAll("section[id]").forEach(s => navObserver.observe(s));
+}
+
+/* ---------- carga ---------- */
+let resizeTimer = null, lastW = window.innerWidth;
+window.addEventListener("resize", () => {
+  if(!lastStats || window.innerWidth === lastW) return;   // ignora cambios solo de alto (barra móvil)
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    lastW = window.innerWidth;
+    const sy = window.scrollY;
+    render(lastStats);
+    window.scrollTo(0, sy);                                // conserva la posición de lectura
+  }, 200);
+});
+
+window.__render = render;   // punto de entrada para las pruebas automatizadas
+
+fetch("data/stats.json", {cache:"no-store"})
+  .then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(s => { lastStats = s; render(s); })
+  .catch(err => {
+    $("#app").innerHTML = "";
+    $("#app").className = "loading";
+    $("#app").textContent = "No se pudieron cargar los datos (" + err.message + "). Intenta recargar la página.";
+  });
+})();
+</script>
+</body>
+</html>
