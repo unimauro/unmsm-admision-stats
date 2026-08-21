@@ -1,0 +1,1941 @@
+{
+ "generado_utc": "2026-08-21T16:16:04.316394+00:00",
+ "universidad": "Universidad Nacional Mayor de San Marcos (UNMSM)",
+ "fuente": "Dataset oficial agregado UNMSM en la Plataforma Nacional de Datos Abiertos (datosabiertos.gob.pe): 'Proceso de admisión de pregrado 2026-1'. Sin datos personales.",
+ "escala": {
+  "max_teorico": 2000,
+  "max_observado": 1679.12,
+  "nota": "Puntaje del examen UNMSM sobre 2,000; sin conversión vigesimal oficial."
+ },
+ "proceso": "2026-1",
+ "totales": {
+  "vacantes": 3124,
+  "postulantes": 30222,
+  "ingresantes": 2803
+ },
+ "por_modalidad": {
+  "EBR/EBA (examen ordinario)": {
+   "vacantes": 2771,
+   "postulantes": 26517,
+   "ingresantes": 2496
+  },
+  "Pre-San Marcos (CEPREUNMSM)": {
+   "vacantes": 353,
+   "postulantes": 3705,
+   "ingresantes": 307
+  }
+ },
+ "por_escuela": {
+  "ADMINISTRACION MARITIMA Y PORTUARIA - HUARAL": {
+   "vacantes": 12,
+   "postulantes": 38,
+   "ingresantes": 12,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 38,
+     "ingresantes": 12,
+     "nota_max": 975.62,
+     "nota_min": 757.75
+    }
+   }
+  },
+  "ADMINISTRACIÓN": {
+   "vacantes": 98,
+   "postulantes": 608,
+   "ingresantes": 97,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 83,
+     "postulantes": 530,
+     "ingresantes": 82,
+     "nota_max": 1265.75,
+     "nota_min": 967.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 15,
+     "postulantes": 78,
+     "ingresantes": 15,
+     "nota_max": 1231.3,
+     "nota_min": 953.51
+    }
+   }
+  },
+  "ADMINISTRACIÓN - HUARAL": {
+   "vacantes": 10,
+   "postulantes": 11,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 10,
+     "postulantes": 11,
+     "ingresantes": 9,
+     "nota_max": 923.75,
+     "nota_min": 534.75
+    }
+   }
+  },
+  "ADMINISTRACIÓN - S.J.L": {
+   "vacantes": 10,
+   "postulantes": 36,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 10,
+     "postulantes": 36,
+     "ingresantes": 9,
+     "nota_max": 972.75,
+     "nota_min": 872.25
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE LA GASTRONOMÍA": {
+   "vacantes": 14,
+   "postulantes": 142,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 130,
+     "ingresantes": 12,
+     "nota_max": 1164.12,
+     "nota_min": 955.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 12,
+     "ingresantes": 2,
+     "nota_max": 1041.63,
+     "nota_min": 927.41
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES": {
+   "vacantes": 53,
+   "postulantes": 1080,
+   "ingresantes": 52,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 47,
+     "postulantes": 929,
+     "ingresantes": 47,
+     "nota_max": 1329.12,
+     "nota_min": 1075.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 151,
+     "ingresantes": 5,
+     "nota_max": 1246.15,
+     "nota_min": 1121.24
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES - HUARAL": {
+   "vacantes": 9,
+   "postulantes": 31,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 9,
+     "postulantes": 31,
+     "ingresantes": 9,
+     "nota_max": 1065.12,
+     "nota_min": 766.75
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES - S.J.L": {
+   "vacantes": 9,
+   "postulantes": 60,
+   "ingresantes": 8,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 9,
+     "postulantes": 60,
+     "ingresantes": 8,
+     "nota_max": 1064.12,
+     "nota_min": 906.0
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE TURISMO": {
+   "vacantes": 53,
+   "postulantes": 183,
+   "ingresantes": 53,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 45,
+     "postulantes": 162,
+     "ingresantes": 45,
+     "nota_max": 1284.5,
+     "nota_min": 863.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 8,
+     "postulantes": 21,
+     "ingresantes": 8,
+     "nota_max": 986.2,
+     "nota_min": 804.55
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE TURISMO - HUARAL": {
+   "vacantes": 10,
+   "postulantes": 18,
+   "ingresantes": 3,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 10,
+     "postulantes": 18,
+     "ingresantes": 3,
+     "nota_max": 1010.5,
+     "nota_min": 722.38
+    }
+   }
+  },
+  "ADMINISTRACIÓN DE TURISMO - S.J.L": {
+   "vacantes": 10,
+   "postulantes": 23,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 10,
+     "postulantes": 23,
+     "ingresantes": 9,
+     "nota_max": 869.5,
+     "nota_min": 704.38
+    }
+   }
+  },
+  "ADMINISTRACIÓN MARÍTIMA Y PORTUARIA": {
+   "vacantes": 14,
+   "postulantes": 136,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 11,
+     "postulantes": 119,
+     "ingresantes": 11,
+     "nota_max": 1314.5,
+     "nota_min": 952.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 17,
+     "ingresantes": 3,
+     "nota_max": 952.68,
+     "nota_min": 893.58
+    }
+   }
+  },
+  "ANTROPOLOGÍA": {
+   "vacantes": 26,
+   "postulantes": 66,
+   "ingresantes": 25,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 23,
+     "postulantes": 62,
+     "ingresantes": 22,
+     "nota_max": 1084.0,
+     "nota_min": 860.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 4,
+     "ingresantes": 3,
+     "nota_max": 1066.56,
+     "nota_min": 648.87
+    }
+   }
+  },
+  "ARQUEOLOGÍA": {
+   "vacantes": 26,
+   "postulantes": 106,
+   "ingresantes": 20,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 23,
+     "postulantes": 98,
+     "ingresantes": 17,
+     "nota_max": 1125.25,
+     "nota_min": 893.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 8,
+     "ingresantes": 3,
+     "nota_max": 989.08,
+     "nota_min": 832.65
+    }
+   }
+  },
+  "ARQUITECTURA Y URBANISMO": {
+   "vacantes": 22,
+   "postulantes": 672,
+   "ingresantes": 22,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 595,
+     "ingresantes": 20,
+     "nota_max": 1281.75,
+     "nota_min": 1072.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 77,
+     "ingresantes": 2,
+     "nota_max": 1185.82,
+     "nota_min": 1151.22
+    }
+   }
+  },
+  "ARTE": {
+   "vacantes": 18,
+   "postulantes": 50,
+   "ingresantes": 16,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 49,
+     "ingresantes": 15,
+     "nota_max": 939.12,
+     "nota_min": 789.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 1,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 896.15,
+     "nota_min": 896.15
+    }
+   }
+  },
+  "AUDITORÍA EMPRESARIAL Y DEL SECTOR PÚBLICO": {
+   "vacantes": 42,
+   "postulantes": 114,
+   "ingresantes": 36,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 112,
+     "ingresantes": 34,
+     "nota_max": 1130.38,
+     "nota_min": 870.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 2,
+     "ingresantes": 2,
+     "nota_max": 899.22,
+     "nota_min": 724.14
+    }
+   }
+  },
+  "AUDITORÍA EMPRESARIAL Y DEL SECTOR PÚBLICO - S.J.L": {
+   "vacantes": 20,
+   "postulantes": 12,
+   "ingresantes": 12,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 12,
+     "ingresantes": 12,
+     "nota_max": 914.62,
+     "nota_min": 492.62
+    }
+   }
+  },
+  "BIBLIOTECOLOGÍA Y CIENCIAS DE LA INFORMACIÓN": {
+   "vacantes": 17,
+   "postulantes": 30,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 28,
+     "ingresantes": 12,
+     "nota_max": 919.75,
+     "nota_min": 718.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 2,
+     "ingresantes": 2,
+     "nota_max": 797.03,
+     "nota_min": 624.61
+    }
+   }
+  },
+  "CIENCIA DE LA COMPUTACIÓN": {
+   "vacantes": 17,
+   "postulantes": 126,
+   "ingresantes": 17,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 116,
+     "ingresantes": 15,
+     "nota_max": 1207.5,
+     "nota_min": 1065.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 10,
+     "ingresantes": 2,
+     "nota_max": 1350.67,
+     "nota_min": 1252.02
+    }
+   }
+  },
+  "CIENCIA POLÍTICA": {
+   "vacantes": 46,
+   "postulantes": 435,
+   "ingresantes": 46,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 40,
+     "postulantes": 398,
+     "ingresantes": 40,
+     "nota_max": 1371.38,
+     "nota_min": 1058.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 37,
+     "ingresantes": 6,
+     "nota_max": 1115.19,
+     "nota_min": 1028.18
+    }
+   }
+  },
+  "CIENCIAS BIOLÓGICAS": {
+   "vacantes": 28,
+   "postulantes": 191,
+   "ingresantes": 28,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 25,
+     "postulantes": 167,
+     "ingresantes": 25,
+     "nota_max": 1327.88,
+     "nota_min": 898.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 24,
+     "ingresantes": 3,
+     "nota_max": 1155.7,
+     "nota_min": 919.85
+    }
+   }
+  },
+  "CIENCIAS DE LOS ALIMENTOS": {
+   "vacantes": 11,
+   "postulantes": 47,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 10,
+     "postulantes": 45,
+     "ingresantes": 8,
+     "nota_max": 1115.38,
+     "nota_min": 1000.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 1,
+     "postulantes": 2,
+     "ingresantes": 1,
+     "nota_max": 928.44,
+     "nota_min": 928.44
+    }
+   }
+  },
+  "COMPUTACIÓN CIENTÍFICA": {
+   "vacantes": 54,
+   "postulantes": 82,
+   "ingresantes": 28,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 48,
+     "postulantes": 80,
+     "ingresantes": 26,
+     "nota_max": 1193.25,
+     "nota_min": 699.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 2,
+     "ingresantes": 2,
+     "nota_max": 679.76,
+     "nota_min": 502.89
+    }
+   }
+  },
+  "COMUNICACIÓN SOCIAL": {
+   "vacantes": 19,
+   "postulantes": 349,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 18,
+     "postulantes": 310,
+     "ingresantes": 17,
+     "nota_max": 1258.88,
+     "nota_min": 1104.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 1,
+     "postulantes": 39,
+     "ingresantes": 1,
+     "nota_max": 1168.15,
+     "nota_min": 1168.15
+    }
+   }
+  },
+  "CONSERVACIÓN Y RESTAURACIÓN": {
+   "vacantes": 14,
+   "postulantes": 46,
+   "ingresantes": 9,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 46,
+     "ingresantes": 9,
+     "nota_max": 970.0,
+     "nota_min": 826.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 0,
+     "ingresantes": 0,
+     "nota_max": null,
+     "nota_min": null
+    }
+   }
+  },
+  "CONTABILIDAD": {
+   "vacantes": 114,
+   "postulantes": 545,
+   "ingresantes": 115,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 99,
+     "postulantes": 481,
+     "ingresantes": 100,
+     "nota_max": 1245.62,
+     "nota_min": 923.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 15,
+     "postulantes": 64,
+     "ingresantes": 15,
+     "nota_max": 985.13,
+     "nota_min": 840.95
+    }
+   }
+  },
+  "CONTABILIDAD - HUARAL": {
+   "vacantes": 20,
+   "postulantes": 38,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 38,
+     "ingresantes": 14,
+     "nota_max": 932.88,
+     "nota_min": 674.25
+    }
+   }
+  },
+  "CONTABILIDAD - S.J.L": {
+   "vacantes": 20,
+   "postulantes": 50,
+   "ingresantes": 20,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 50,
+     "ingresantes": 20,
+     "nota_max": 1117.88,
+     "nota_min": 786.62
+    }
+   }
+  },
+  "CRIMINALÍSTICA FINANCIERA FORENSE": {
+   "vacantes": 45,
+   "postulantes": 178,
+   "ingresantes": 44,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 40,
+     "postulantes": 163,
+     "ingresantes": 39,
+     "nota_max": 1131.0,
+     "nota_min": 858.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 15,
+     "ingresantes": 5,
+     "nota_max": 1003.8,
+     "nota_min": 879.93
+    }
+   }
+  },
+  "DANZA": {
+   "vacantes": 8,
+   "postulantes": 12,
+   "ingresantes": 7,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 6,
+     "postulantes": 10,
+     "ingresantes": 6,
+     "nota_max": 1102.25,
+     "nota_min": 977.69
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 2,
+     "ingresantes": 1,
+     "nota_max": 1111.21,
+     "nota_min": 1111.21
+    }
+   }
+  },
+  "DERECHO": {
+   "vacantes": 154,
+   "postulantes": 2502,
+   "ingresantes": 154,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 135,
+     "postulantes": 2140,
+     "ingresantes": 135,
+     "nota_max": 1485.0,
+     "nota_min": 1143.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 19,
+     "postulantes": 362,
+     "ingresantes": 19,
+     "nota_max": 1257.37,
+     "nota_min": 1151.3
+    }
+   }
+  },
+  "ECONOMÍA": {
+   "vacantes": 87,
+   "postulantes": 778,
+   "ingresantes": 87,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 77,
+     "postulantes": 695,
+     "ingresantes": 77,
+     "nota_max": 1439.88,
+     "nota_min": 1092.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 10,
+     "postulantes": 83,
+     "ingresantes": 10,
+     "nota_max": 1288.57,
+     "nota_min": 1011.18
+    }
+   }
+  },
+  "ECONOMÍA INTERNACIONAL": {
+   "vacantes": 77,
+   "postulantes": 261,
+   "ingresantes": 75,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 68,
+     "postulantes": 233,
+     "ingresantes": 66,
+     "nota_max": 1244.62,
+     "nota_min": 906.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 9,
+     "postulantes": 28,
+     "ingresantes": 9,
+     "nota_max": 1034.51,
+     "nota_min": 917.85
+    }
+   }
+  },
+  "ECONOMÍA PÚBLICA": {
+   "vacantes": 70,
+   "postulantes": 191,
+   "ingresantes": 69,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 64,
+     "postulantes": 171,
+     "ingresantes": 63,
+     "nota_max": 1235.5,
+     "nota_min": 916.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 20,
+     "ingresantes": 6,
+     "nota_max": 1094.79,
+     "nota_min": 929.81
+    }
+   }
+  },
+  "EDUCACIÓN FÍSICA": {
+   "vacantes": 64,
+   "postulantes": 195,
+   "ingresantes": 64,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 55,
+     "postulantes": 174,
+     "ingresantes": 55,
+     "nota_max": 1139.09,
+     "nota_min": 919.26
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 9,
+     "postulantes": 21,
+     "ingresantes": 9,
+     "nota_max": 1142.73,
+     "nota_min": 853.52
+    }
+   }
+  },
+  "EDUCACIÓN INICIAL": {
+   "vacantes": 14,
+   "postulantes": 185,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 165,
+     "ingresantes": 12,
+     "nota_max": 1148.12,
+     "nota_min": 911.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 20,
+     "ingresantes": 2,
+     "nota_max": 884.93,
+     "nota_min": 818.21
+    }
+   }
+  },
+  "EDUCACIÓN PRIMARIA": {
+   "vacantes": 14,
+   "postulantes": 124,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 113,
+     "ingresantes": 12,
+     "nota_max": 1136.0,
+     "nota_min": 952.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 11,
+     "ingresantes": 2,
+     "nota_max": 865.68,
+     "nota_min": 772.49
+    }
+   }
+  },
+  "EDUCACIÓN SECUNDARIA": {
+   "vacantes": 68,
+   "postulantes": 358,
+   "ingresantes": 66,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 60,
+     "postulantes": 334,
+     "ingresantes": 58,
+     "nota_max": 1313.0,
+     "nota_min": 941.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 8,
+     "postulantes": 24,
+     "ingresantes": 8,
+     "nota_max": 1105.82,
+     "nota_min": 863.23
+    }
+   }
+  },
+  "ENFERMERÍA": {
+   "vacantes": 52,
+   "postulantes": 652,
+   "ingresantes": 50,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 46,
+     "postulantes": 589,
+     "ingresantes": 45,
+     "nota_max": 1605.38,
+     "nota_min": 1080.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 63,
+     "ingresantes": 5,
+     "nota_max": 1039.19,
+     "nota_min": 958.56
+    }
+   }
+  },
+  "ESTADÍSTICA": {
+   "vacantes": 53,
+   "postulantes": 106,
+   "ingresantes": 39,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 47,
+     "postulantes": 99,
+     "ingresantes": 33,
+     "nota_max": 1194.38,
+     "nota_min": 745.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 7,
+     "ingresantes": 6,
+     "nota_max": 766.21,
+     "nota_min": 549.72
+    }
+   }
+  },
+  "FARMACIA Y BIOQUÍMICA": {
+   "vacantes": 33,
+   "postulantes": 303,
+   "ingresantes": 32,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 29,
+     "postulantes": 267,
+     "ingresantes": 28,
+     "nota_max": 1587.75,
+     "nota_min": 1110.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 4,
+     "postulantes": 36,
+     "ingresantes": 4,
+     "nota_max": 1291.4,
+     "nota_min": 985.55
+    }
+   }
+  },
+  "FILOSOFÍA": {
+   "vacantes": 20,
+   "postulantes": 56,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 55,
+     "ingresantes": 17,
+     "nota_max": 1236.62,
+     "nota_min": 930.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 731.9,
+     "nota_min": 731.9
+    }
+   }
+  },
+  "FÍSICA": {
+   "vacantes": 39,
+   "postulantes": 66,
+   "ingresantes": 24,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 65,
+     "ingresantes": 23,
+     "nota_max": 1296.0,
+     "nota_min": 701.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 4,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 536.26,
+     "nota_min": 536.26
+    }
+   }
+  },
+  "GENÉTICA Y BIOTECNOLOGÍA": {
+   "vacantes": 23,
+   "postulantes": 186,
+   "ingresantes": 22,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 21,
+     "postulantes": 157,
+     "ingresantes": 20,
+     "nota_max": 1365.62,
+     "nota_min": 1003.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 29,
+     "ingresantes": 2,
+     "nota_max": 1330.46,
+     "nota_min": 1162.57
+    }
+   }
+  },
+  "GEOGRAFÍA": {
+   "vacantes": 36,
+   "postulantes": 77,
+   "ingresantes": 29,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 76,
+     "ingresantes": 28,
+     "nota_max": 1160.12,
+     "nota_min": 799.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 1,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 775.23,
+     "nota_min": 775.23
+    }
+   }
+  },
+  "GESTIÓN TRIBUTARIA": {
+   "vacantes": 42,
+   "postulantes": 247,
+   "ingresantes": 36,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 242,
+     "ingresantes": 31,
+     "nota_max": 1160.12,
+     "nota_min": 906.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 5,
+     "ingresantes": 5,
+     "nota_max": 859.37,
+     "nota_min": 645.94
+    }
+   }
+  },
+  "GESTIÓN TRIBUTARIA - S.J.L": {
+   "vacantes": 20,
+   "postulantes": 27,
+   "ingresantes": 19,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 27,
+     "ingresantes": 19,
+     "nota_max": 1067.0,
+     "nota_min": 571.88
+    }
+   }
+  },
+  "HISTORIA": {
+   "vacantes": 17,
+   "postulantes": 89,
+   "ingresantes": 16,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 84,
+     "ingresantes": 14,
+     "nota_max": 1248.0,
+     "nota_min": 954.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 5,
+     "ingresantes": 2,
+     "nota_max": 1021.3,
+     "nota_min": 959.54
+    }
+   }
+  },
+  "INGENIERIA DEL AGUA Y TECNOLOGIAS DE TRATAMIENTO": {
+   "vacantes": 21,
+   "postulantes": 116,
+   "ingresantes": 10,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 16,
+     "postulantes": 115,
+     "ingresantes": 9,
+     "nota_max": 1084.75,
+     "nota_min": 815.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 667.12,
+     "nota_min": 667.12
+    }
+   }
+  },
+  "INGENIERÍA AGROINDUSTRIAL": {
+   "vacantes": 40,
+   "postulantes": 160,
+   "ingresantes": 35,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 154,
+     "ingresantes": 31,
+     "nota_max": 1570.62,
+     "nota_min": 837.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 6,
+     "ingresantes": 4,
+     "nota_max": 810.16,
+     "nota_min": 573.18
+    }
+   }
+  },
+  "INGENIERÍA AMBIENTAL": {
+   "vacantes": 17,
+   "postulantes": 178,
+   "ingresantes": 17,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 158,
+     "ingresantes": 15,
+     "nota_max": 1214.38,
+     "nota_min": 978.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 20,
+     "ingresantes": 2,
+     "nota_max": 1032.19,
+     "nota_min": 928.74
+    }
+   }
+  },
+  "INGENIERÍA BIOMÉDICA": {
+   "vacantes": 17,
+   "postulantes": 296,
+   "ingresantes": 15,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 239,
+     "ingresantes": 13,
+     "nota_max": 1436.38,
+     "nota_min": 1169.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 57,
+     "ingresantes": 2,
+     "nota_max": 1382.43,
+     "nota_min": 1268.87
+    }
+   }
+  },
+  "INGENIERÍA CIVIL": {
+   "vacantes": 30,
+   "postulantes": 805,
+   "ingresantes": 31,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 27,
+     "postulantes": 691,
+     "ingresantes": 28,
+     "nota_max": 1337.12,
+     "nota_min": 1125.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 114,
+     "ingresantes": 3,
+     "nota_max": 1397.36,
+     "nota_min": 1267.84
+    }
+   }
+  },
+  "INGENIERÍA DE MINAS": {
+   "vacantes": 17,
+   "postulantes": 315,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 275,
+     "ingresantes": 12,
+     "nota_max": 1316.0,
+     "nota_min": 1076.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 40,
+     "ingresantes": 2,
+     "nota_max": 1108.64,
+     "nota_min": 1092.52
+    }
+   }
+  },
+  "INGENIERÍA DE SEGURIDAD Y SALUD EN EL TRABAJO": {
+   "vacantes": 20,
+   "postulantes": 54,
+   "ingresantes": 19,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 18,
+     "postulantes": 49,
+     "ingresantes": 17,
+     "nota_max": 1174.88,
+     "nota_min": 834.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 5,
+     "ingresantes": 2,
+     "nota_max": 907.97,
+     "nota_min": 850.03
+    }
+   }
+  },
+  "INGENIERÍA DE SISTEMAS": {
+   "vacantes": 36,
+   "postulantes": 1233,
+   "ingresantes": 33,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 32,
+     "postulantes": 1033,
+     "ingresantes": 29,
+     "nota_max": 1650.0,
+     "nota_min": 1192.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 4,
+     "postulantes": 200,
+     "ingresantes": 4,
+     "nota_max": 1510.2,
+     "nota_min": 1379.79
+    }
+   }
+  },
+  "INGENIERÍA DE SOFTWARE": {
+   "vacantes": 17,
+   "postulantes": 411,
+   "ingresantes": 15,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 343,
+     "ingresantes": 13,
+     "nota_max": 1425.0,
+     "nota_min": 1185.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 68,
+     "ingresantes": 2,
+     "nota_max": 1481.88,
+     "nota_min": 1404.24
+    }
+   }
+  },
+  "INGENIERÍA DE TELECOMUNICACIONES": {
+   "vacantes": 33,
+   "postulantes": 172,
+   "ingresantes": 32,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 30,
+     "postulantes": 154,
+     "ingresantes": 29,
+     "nota_max": 1227.5,
+     "nota_min": 931.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 18,
+     "ingresantes": 3,
+     "nota_max": 1253.21,
+     "nota_min": 1032.38
+    }
+   }
+  },
+  "INGENIERÍA ELECTRÓNICA": {
+   "vacantes": 52,
+   "postulantes": 278,
+   "ingresantes": 49,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 45,
+     "postulantes": 245,
+     "ingresantes": 42,
+     "nota_max": 1335.38,
+     "nota_min": 973.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 33,
+     "ingresantes": 7,
+     "nota_max": 1304.92,
+     "nota_min": 966.05
+    }
+   }
+  },
+  "INGENIERÍA ELÉCTRICA": {
+   "vacantes": 23,
+   "postulantes": 191,
+   "ingresantes": 23,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 177,
+     "ingresantes": 20,
+     "nota_max": 1345.62,
+     "nota_min": 994.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 14,
+     "ingresantes": 3,
+     "nota_max": 1074.27,
+     "nota_min": 836.55
+    }
+   }
+  },
+  "INGENIERÍA GEOGRÁFICA": {
+   "vacantes": 28,
+   "postulantes": 63,
+   "ingresantes": 23,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 25,
+     "postulantes": 61,
+     "ingresantes": 21,
+     "nota_max": 1308.0,
+     "nota_min": 754.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 2,
+     "ingresantes": 2,
+     "nota_max": 802.43,
+     "nota_min": 719.72
+    }
+   }
+  },
+  "INGENIERÍA GEOLÓGICA": {
+   "vacantes": 23,
+   "postulantes": 193,
+   "ingresantes": 23,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 21,
+     "postulantes": 175,
+     "ingresantes": 21,
+     "nota_max": 1312.0,
+     "nota_min": 960.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 18,
+     "ingresantes": 2,
+     "nota_max": 1040.35,
+     "nota_min": 989.75
+    }
+   }
+  },
+  "INGENIERÍA INDUSTRIAL": {
+   "vacantes": 83,
+   "postulantes": 1095,
+   "ingresantes": 80,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 73,
+     "postulantes": 928,
+     "ingresantes": 70,
+     "nota_max": 1379.38,
+     "nota_min": 1072.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 10,
+     "postulantes": 167,
+     "ingresantes": 10,
+     "nota_max": 1404.41,
+     "nota_min": 1179.22
+    }
+   }
+  },
+  "INGENIERÍA LOGÍSTICA Y CADENA DE SUMISTRO DIGITAL": {
+   "vacantes": 29,
+   "postulantes": 531,
+   "ingresantes": 24,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 26,
+     "postulantes": 531,
+     "ingresantes": 24,
+     "nota_max": 1396.5,
+     "nota_min": 962.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 0,
+     "ingresantes": 0,
+     "nota_max": null,
+     "nota_min": null
+    }
+   }
+  },
+  "INGENIERÍA MECATRONICA": {
+   "vacantes": 22,
+   "postulantes": 360,
+   "ingresantes": 17,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 355,
+     "ingresantes": 15,
+     "nota_max": 1540.25,
+     "nota_min": 1066.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 5,
+     "ingresantes": 2,
+     "nota_max": 823.81,
+     "nota_min": 695.43
+    }
+   }
+  },
+  "INGENIERÍA MECÁNICA DE FLUIDOS": {
+   "vacantes": 35,
+   "postulantes": 116,
+   "ingresantes": 24,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 30,
+     "postulantes": 108,
+     "ingresantes": 19,
+     "nota_max": 1414.75,
+     "nota_min": 865.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 8,
+     "ingresantes": 5,
+     "nota_max": 798.24,
+     "nota_min": 566.72
+    }
+   }
+  },
+  "INGENIERÍA METALÚRGICA": {
+   "vacantes": 17,
+   "postulantes": 89,
+   "ingresantes": 16,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 80,
+     "ingresantes": 14,
+     "nota_max": 1242.88,
+     "nota_min": 935.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 9,
+     "ingresantes": 2,
+     "nota_max": 883.63,
+     "nota_min": 829.1
+    }
+   }
+  },
+  "INGENIERÍA NUCLEAR": {
+   "vacantes": 22,
+   "postulantes": 161,
+   "ingresantes": 13,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 145,
+     "ingresantes": 12,
+     "nota_max": 1206.38,
+     "nota_min": 837.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 16,
+     "ingresantes": 1,
+     "nota_max": 1138.7,
+     "nota_min": 944.64
+    }
+   }
+  },
+  "INGENIERÍA QUÍMICA": {
+   "vacantes": 43,
+   "postulantes": 262,
+   "ingresantes": 38,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 38,
+     "postulantes": 234,
+     "ingresantes": 33,
+     "nota_max": 1379.38,
+     "nota_min": 982.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 28,
+     "ingresantes": 5,
+     "nota_max": 1166.92,
+     "nota_min": 940.96
+    }
+   }
+  },
+  "INGENIERÍA TEXTIL Y CONFECCIONES": {
+   "vacantes": 29,
+   "postulantes": 66,
+   "ingresantes": 23,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 26,
+     "postulantes": 65,
+     "ingresantes": 22,
+     "nota_max": 1172.12,
+     "nota_min": 750.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 781.99,
+     "nota_min": 781.99
+    }
+   }
+  },
+  "INVESTIGACIÓN OPERATIVA": {
+   "vacantes": 55,
+   "postulantes": 106,
+   "ingresantes": 19,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 49,
+     "postulantes": 104,
+     "ingresantes": 17,
+     "nota_max": 1112.12,
+     "nota_min": 674.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 2,
+     "ingresantes": 2,
+     "nota_max": 657.07,
+     "nota_min": 428.38
+    }
+   }
+  },
+  "LENGUAS, TRADUCCIÓN E INTERPRETACIÓN": {
+   "vacantes": 17,
+   "postulantes": 235,
+   "ingresantes": 17,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 15,
+     "postulantes": 199,
+     "ingresantes": 15,
+     "nota_max": 1308.0,
+     "nota_min": 1100.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 36,
+     "ingresantes": 2,
+     "nota_max": 1201.93,
+     "nota_min": 1142.8
+    }
+   }
+  },
+  "LINGUÍSTICA": {
+   "vacantes": 18,
+   "postulantes": 39,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 16,
+     "postulantes": 34,
+     "ingresantes": 16,
+     "nota_max": 1188.0,
+     "nota_min": 830.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 5,
+     "ingresantes": 2,
+     "nota_max": 1267.16,
+     "nota_min": 982.6
+    }
+   }
+  },
+  "LITERATURA": {
+   "vacantes": 19,
+   "postulantes": 103,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 94,
+     "ingresantes": 16,
+     "nota_max": 1234.88,
+     "nota_min": 959.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 9,
+     "ingresantes": 2,
+     "nota_max": 1162.88,
+     "nota_min": 1077.33
+    }
+   }
+  },
+  "MARKETING": {
+   "vacantes": 14,
+   "postulantes": 198,
+   "ingresantes": 14,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 12,
+     "postulantes": 176,
+     "ingresantes": 12,
+     "nota_max": 1221.75,
+     "nota_min": 1008.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 22,
+     "ingresantes": 2,
+     "nota_max": 1070.97,
+     "nota_min": 1049.84
+    }
+   }
+  },
+  "MATEMÁTICA": {
+   "vacantes": 55,
+   "postulantes": 105,
+   "ingresantes": 19,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 49,
+     "postulantes": 104,
+     "ingresantes": 18,
+     "nota_max": 1080.75,
+     "nota_min": 729.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 6,
+     "postulantes": 1,
+     "ingresantes": 1,
+     "nota_max": 518.08,
+     "nota_min": 518.08
+    }
+   }
+  },
+  "MEDICINA HUMANA": {
+   "vacantes": 62,
+   "postulantes": 5731,
+   "ingresantes": 61,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 55,
+     "postulantes": 4709,
+     "ingresantes": 54,
+     "nota_max": 1679.12,
+     "nota_min": 1469.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 1022,
+     "ingresantes": 7,
+     "nota_max": 1662.96,
+     "nota_min": 1622.34
+    }
+   }
+  },
+  "MEDICINA VETERINARIA": {
+   "vacantes": 23,
+   "postulantes": 548,
+   "ingresantes": 22,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 466,
+     "ingresantes": 19,
+     "nota_max": 1528.38,
+     "nota_min": 1200.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 82,
+     "ingresantes": 3,
+     "nota_max": 1360.95,
+     "nota_min": 1206.96
+    }
+   }
+  },
+  "MICROBIOLOGÍA Y PARASITOLOGÍA": {
+   "vacantes": 26,
+   "postulantes": 85,
+   "ingresantes": 25,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 23,
+     "postulantes": 78,
+     "ingresantes": 22,
+     "nota_max": 1210.38,
+     "nota_min": 826.12
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 7,
+     "ingresantes": 3,
+     "nota_max": 1100.19,
+     "nota_min": 774.97
+    }
+   }
+  },
+  "NUTRICION": {
+   "vacantes": 27,
+   "postulantes": 259,
+   "ingresantes": 26,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 24,
+     "postulantes": 237,
+     "ingresantes": 23,
+     "nota_max": 1267.38,
+     "nota_min": 1087.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 3,
+     "postulantes": 22,
+     "ingresantes": 3,
+     "nota_max": 1304.18,
+     "nota_min": 962.51
+    }
+   }
+  },
+  "OBSTETRICIA": {
+   "vacantes": 49,
+   "postulantes": 425,
+   "ingresantes": 48,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 44,
+     "postulantes": 383,
+     "ingresantes": 43,
+     "nota_max": 1301.62,
+     "nota_min": 1063.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 42,
+     "ingresantes": 5,
+     "nota_max": 1266.16,
+     "nota_min": 971.16
+    }
+   }
+  },
+  "ODONTOLOGÍA": {
+   "vacantes": 27,
+   "postulantes": 527,
+   "ingresantes": 27,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 25,
+     "postulantes": 465,
+     "ingresantes": 25,
+     "nota_max": 1481.0,
+     "nota_min": 1189.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 62,
+     "ingresantes": 2,
+     "nota_max": 1260.02,
+     "nota_min": 1183.66
+    }
+   }
+  },
+  "PRESUPUESTO Y FINANZAS PÚBLICAS": {
+   "vacantes": 42,
+   "postulantes": 130,
+   "ingresantes": 36,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 124,
+     "ingresantes": 30,
+     "nota_max": 1185.25,
+     "nota_min": 902.88
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 6,
+     "ingresantes": 6,
+     "nota_max": 773.1,
+     "nota_min": 609.04
+    }
+   }
+  },
+  "PRESUPUESTO Y FINANZAS PÚBLICAS - S.J.L": {
+   "vacantes": 20,
+   "postulantes": 18,
+   "ingresantes": 17,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 20,
+     "postulantes": 18,
+     "ingresantes": 17,
+     "nota_max": 882.5,
+     "nota_min": 447.0
+    }
+   }
+  },
+  "PSICOLOGÍA": {
+   "vacantes": 55,
+   "postulantes": 1311,
+   "ingresantes": 55,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 48,
+     "postulantes": 1164,
+     "ingresantes": 48,
+     "nota_max": 1379.38,
+     "nota_min": 1192.62
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 7,
+     "postulantes": 147,
+     "ingresantes": 7,
+     "nota_max": 1329.5,
+     "nota_min": 1200.15
+    }
+   }
+  },
+  "PSICOLOGÍA ORGANIZACIONAL Y DE LA GESTIÓN HUMANA": {
+   "vacantes": 25,
+   "postulantes": 292,
+   "ingresantes": 25,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 21,
+     "postulantes": 259,
+     "ingresantes": 21,
+     "nota_max": 1341.12,
+     "nota_min": 1097.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 4,
+     "postulantes": 33,
+     "ingresantes": 4,
+     "nota_max": 1072.84,
+     "nota_min": 1014.44
+    }
+   }
+  },
+  "QUÍMICA": {
+   "vacantes": 32,
+   "postulantes": 54,
+   "ingresantes": 22,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 28,
+     "postulantes": 52,
+     "ingresantes": 21,
+     "nota_max": 993.38,
+     "nota_min": 743.25
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 4,
+     "postulantes": 2,
+     "ingresantes": 1,
+     "nota_max": 687.49,
+     "nota_min": 537.58
+    }
+   }
+  },
+  "SOCIOLOGÍA": {
+   "vacantes": 24,
+   "postulantes": 93,
+   "ingresantes": 24,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 22,
+     "postulantes": 84,
+     "ingresantes": 22,
+     "nota_max": 1096.75,
+     "nota_min": 885.5
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 9,
+     "ingresantes": 2,
+     "nota_max": 1253.87,
+     "nota_min": 1009.25
+    }
+   }
+  },
+  "TEC. MED. LAB. CLÍNICO Y ANATOMÍA PATOLÓGICA": {
+   "vacantes": 19,
+   "postulantes": 165,
+   "ingresantes": 19,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 147,
+     "ingresantes": 17,
+     "nota_max": 1525.5,
+     "nota_min": 1147.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 18,
+     "ingresantes": 2,
+     "nota_max": 1194.46,
+     "nota_min": 996.79
+    }
+   }
+  },
+  "TEC. MED. RADIOLOGÍA": {
+   "vacantes": 19,
+   "postulantes": 167,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 157,
+     "ingresantes": 16,
+     "nota_max": 1360.5,
+     "nota_min": 1097.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 10,
+     "ingresantes": 2,
+     "nota_max": 922.08,
+     "nota_min": 864.9
+    }
+   }
+  },
+  "TEC. MED. TERAPIA FÍSICA Y REHABILITACIÓN": {
+   "vacantes": 19,
+   "postulantes": 182,
+   "ingresantes": 18,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 168,
+     "ingresantes": 16,
+     "nota_max": 1429.62,
+     "nota_min": 1087.0
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 14,
+     "ingresantes": 2,
+     "nota_max": 1130.67,
+     "nota_min": 842.29
+    }
+   }
+  },
+  "TEC. MED. TERAPIA OCUPACIONAL": {
+   "vacantes": 19,
+   "postulantes": 115,
+   "ingresantes": 16,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 17,
+     "postulantes": 109,
+     "ingresantes": 14,
+     "nota_max": 1189.25,
+     "nota_min": 982.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 2,
+     "postulantes": 6,
+     "ingresantes": 2,
+     "nota_max": 853.82,
+     "nota_min": 820.81
+    }
+   }
+  },
+  "TOXICOLOGÍA": {
+   "vacantes": 12,
+   "postulantes": 61,
+   "ingresantes": 8,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 11,
+     "postulantes": 56,
+     "ingresantes": 7,
+     "nota_max": 1298.62,
+     "nota_min": 1034.75
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 1,
+     "postulantes": 5,
+     "ingresantes": 1,
+     "nota_max": 810.02,
+     "nota_min": 810.02
+    }
+   }
+  },
+  "TRABAJO SOCIAL": {
+   "vacantes": 40,
+   "postulantes": 210,
+   "ingresantes": 40,
+   "por_modalidad": {
+    "EBR/EBA (examen ordinario)": {
+     "vacantes": 35,
+     "postulantes": 182,
+     "ingresantes": 35,
+     "nota_max": 1123.0,
+     "nota_min": 922.38
+    },
+    "Pre-San Marcos (CEPREUNMSM)": {
+     "vacantes": 5,
+     "postulantes": 28,
+     "ingresantes": 5,
+     "nota_max": 1147.78,
+     "nota_min": 910.55
+    }
+   }
+  }
+ }
+}
