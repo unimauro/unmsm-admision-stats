@@ -1,0 +1,3 @@
+.cache_scrape/
+__pycache__/
+.DS_Store
