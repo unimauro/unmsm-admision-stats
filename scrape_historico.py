@@ -34,6 +34,7 @@ PROCESOS = {  # proceso -> sitio
     "2025-1": "Website20251",
     "2026-1": "Website20261",
     "2026-2": "Website20262",
+    "2027-1": "Website20271",
 }
 
 RE_ROW = re.compile(r"<tr[^>]*>(.*?)</tr>", re.S)

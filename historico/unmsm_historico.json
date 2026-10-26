@@ -6402,8 +6402,499 @@
      }
     }
    }
+  },
+  "2027-1": {
+   "fuente": "https://admision.unmsm.edu.pe/Website20271/",
+   "totales": {
+    "postulantes": 18878,
+    "ingresantes": 2133
+   },
+   "por_modalidad": {
+    "EDUCACIÓN BÁSICA REGULAR (EBR) Y EDUCACIÓN BÁSICA ALTERNATIVA (EBA)": {
+     "ADMINISTRACIÓN": {
+      "postulantes": 621,
+      "ingresantes": 83,
+      "nota_max": 1473.5,
+      "nota_cierre": 982.0
+     },
+     "ADMINISTRACIÓN - S.J.L": {
+      "postulantes": 58,
+      "ingresantes": 9,
+      "nota_max": 997.38,
+      "nota_cierre": 828.88
+     },
+     "ADMINISTRACIÓN DE LA GASTRONOMÍA": {
+      "postulantes": 145,
+      "ingresantes": 12,
+      "nota_max": 1151.0,
+      "nota_cierre": 1005.75
+     },
+     "ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES": {
+      "postulantes": 970,
+      "ingresantes": 47,
+      "nota_max": 1429.62,
+      "nota_cierre": 1111.0
+     },
+     "ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES - S.J.L": {
+      "postulantes": 115,
+      "ingresantes": 8,
+      "nota_max": 1155.0,
+      "nota_cierre": 999.12
+     },
+     "ADMINISTRACIÓN DE TURISMO": {
+      "postulantes": 292,
+      "ingresantes": 67,
+      "nota_max": 1239.5,
+      "nota_cierre": 844.38
+     },
+     "ADMINISTRACIÓN DE TURISMO - S.J.L": {
+      "postulantes": 49,
+      "ingresantes": 14,
+      "nota_max": 1125.88,
+      "nota_cierre": 751.38
+     },
+     "ADMINISTRACIÓN MARÍTIMA Y PORTUARIA": {
+      "postulantes": 154,
+      "ingresantes": 11,
+      "nota_max": 1154.38,
+      "nota_cierre": 1045.38
+     },
+     "ANTROPOLOGÍA": {
+      "postulantes": 94,
+      "ingresantes": 20,
+      "nota_max": 1170.0,
+      "nota_cierre": 936.88
+     },
+     "ARQUEOLOGÍA": {
+      "postulantes": 68,
+      "ingresantes": 19,
+      "nota_max": 1089.0,
+      "nota_cierre": 822.88
+     },
+     "ARQUITECTURA Y URBANISMO": {
+      "postulantes": 562,
+      "ingresantes": 10,
+      "nota_max": 1282.75,
+      "nota_cierre": 1164.12
+     },
+     "ARTE": {
+      "postulantes": 40,
+      "ingresantes": 14,
+      "nota_max": 1379.38,
+      "nota_cierre": 764.62
+     },
+     "AUDITORÍA EMPRESARIAL Y DEL SECTOR PÚBLICO": {
+      "postulantes": 140,
+      "ingresantes": 50,
+      "nota_max": 1387.25,
+      "nota_cierre": 820.25
+     },
+     "AUDITORÍA EMPRESARIAL Y DEL SECTOR PÚBLICO - S.J.L": {
+      "postulantes": 32,
+      "ingresantes": 16,
+      "nota_max": 928.88,
+      "nota_cierre": 665.12
+     },
+     "BIBLIOTECOLOGÍA Y CIENCIAS DE LA INFORMACIÓN": {
+      "postulantes": 79,
+      "ingresantes": 15,
+      "nota_max": 1184.62,
+      "nota_cierre": 884.25
+     },
+     "CIENCIA DE LA COMPUTACIÓN": {
+      "postulantes": 159,
+      "ingresantes": 28,
+      "nota_max": 1174.38,
+      "nota_cierre": 910.0
+     },
+     "CIENCIA DE MATERIALES Y NANOTECNOLOGÍA": {
+      "postulantes": 38,
+      "ingresantes": 17,
+      "nota_max": 950.0,
+      "nota_cierre": 706.12
+     },
+     "CIENCIA POLÍTICA": {
+      "postulantes": 448,
+      "ingresantes": 41,
+      "nota_max": 1409.62,
+      "nota_cierre": 1066.5
+     },
+     "CIENCIAS BIOLÓGICAS": {
+      "postulantes": 194,
+      "ingresantes": 17,
+      "nota_max": 1213.75,
+      "nota_cierre": 950.12
+     },
+     "COMPUTACIÓN CIENTÍFICA": {
+      "postulantes": 108,
+      "ingresantes": 28,
+      "nota_max": 1062.5,
+      "nota_cierre": 785.88
+     },
+     "COMUNICACIÓN SOCIAL": {
+      "postulantes": 371,
+      "ingresantes": 22,
+      "nota_max": 1321.12,
+      "nota_cierre": 1135.0
+     },
+     "CONSERVACIÓN Y RESTAURACIÓN": {
+      "postulantes": 45,
+      "ingresantes": 14,
+      "nota_max": 1144.62,
+      "nota_cierre": 762.75
+     },
+     "CONTABILIDAD": {
+      "postulantes": 617,
+      "ingresantes": 90,
+      "nota_max": 1417.5,
+      "nota_cierre": 942.0
+     },
+     "CONTABILIDAD - HUARAL": {
+      "postulantes": 41,
+      "ingresantes": 14,
+      "nota_max": 1193.25,
+      "nota_cierre": 685.0
+     },
+     "CONTABILIDAD - S.J.L": {
+      "postulantes": 49,
+      "ingresantes": 16,
+      "nota_max": 1321.5,
+      "nota_cierre": 783.75
+     },
+     "CRIMINALÍSTICA FINANCIERA FORENSE": {
+      "postulantes": 166,
+      "ingresantes": 40,
+      "nota_max": 1148.12,
+      "nota_cierre": 841.38
+     },
+     "DANZA": {
+      "postulantes": 8,
+      "ingresantes": 7,
+      "nota_max": 1111.5,
+      "nota_cierre": 950.31
+     },
+     "DERECHO": {
+      "postulantes": 2171,
+      "ingresantes": 90,
+      "nota_max": 1446.75,
+      "nota_cierre": 1168.12
+     },
+     "ECONOMÍA": {
+      "postulantes": 656,
+      "ingresantes": 77,
+      "nota_max": 1420.75,
+      "nota_cierre": 1125.12
+     },
+     "ECONOMÍA INTERNACIONAL": {
+      "postulantes": 348,
+      "ingresantes": 73,
+      "nota_max": 1326.62,
+      "nota_cierre": 1020.25
+     },
+     "ECONOMÍA PÚBLICA": {
+      "postulantes": 357,
+      "ingresantes": 69,
+      "nota_max": 1497.5,
+      "nota_cierre": 1011.5
+     },
+     "EDUCACIÓN FÍSICA": {
+      "postulantes": 108,
+      "ingresantes": 36,
+      "nota_max": 1262.58,
+      "nota_cierre": 919.25
+     },
+     "EDUCACIÓN INICIAL": {
+      "postulantes": 194,
+      "ingresantes": 11,
+      "nota_max": 1165.62,
+      "nota_cierre": 901.5
+     },
+     "EDUCACIÓN PRIMARIA": {
+      "postulantes": 174,
+      "ingresantes": 11,
+      "nota_max": 1199.5,
+      "nota_cierre": 986.38
+     },
+     "EDUCACIÓN SECUNDARIA": {
+      "postulantes": 521,
+      "ingresantes": 42,
+      "nota_max": 1296.0,
+      "nota_cierre": 1028.25
+     },
+     "ESTADÍSTICA": {
+      "postulantes": 118,
+      "ingresantes": 28,
+      "nota_max": 1208.0,
+      "nota_cierre": 820.5
+     },
+     "FILOSOFÍA": {
+      "postulantes": 43,
+      "ingresantes": 14,
+      "nota_max": 1072.62,
+      "nota_cierre": 843.88
+     },
+     "FÍSICA": {
+      "postulantes": 49,
+      "ingresantes": 18,
+      "nota_max": 1081.12,
+      "nota_cierre": 747.88
+     },
+     "GENÉTICA Y BIOTECNOLOGÍA": {
+      "postulantes": 193,
+      "ingresantes": 15,
+      "nota_max": 1285.5,
+      "nota_cierre": 1062.5
+     },
+     "GEOFÍSICA": {
+      "postulantes": 23,
+      "ingresantes": 10,
+      "nota_max": 965.62,
+      "nota_cierre": 703.0
+     },
+     "GEOGRAFÍA": {
+      "postulantes": 129,
+      "ingresantes": 34,
+      "nota_max": 1210.38,
+      "nota_cierre": 783.62
+     },
+     "GESTIÓN TRIBUTARIA": {
+      "postulantes": 136,
+      "ingresantes": 50,
+      "nota_max": 1573.5,
+      "nota_cierre": 800.75
+     },
+     "GESTIÓN TRIBUTARIA - S.J.L": {
+      "postulantes": 17,
+      "ingresantes": 12,
+      "nota_max": 994.25,
+      "nota_cierre": 601.75
+     },
+     "HISTORIA": {
+      "postulantes": 76,
+      "ingresantes": 15,
+      "nota_max": 1151.75,
+      "nota_cierre": 952.88
+     },
+     "INGENIERIA DEL AGUA Y TECNOLOGIAS DE TRATAMIENTO": {
+      "postulantes": 80,
+      "ingresantes": 11,
+      "nota_max": 1054.5,
+      "nota_cierre": 901.5
+     },
+     "INGENIERÍA AGROINDUSTRIAL": {
+      "postulantes": 131,
+      "ingresantes": 20,
+      "nota_max": 1084.12,
+      "nota_cierre": 900.0
+     },
+     "INGENIERÍA AMBIENTAL": {
+      "postulantes": 141,
+      "ingresantes": 13,
+      "nota_max": 1092.75,
+      "nota_cierre": 979.12
+     },
+     "INGENIERÍA BIOMÉDICA": {
+      "postulantes": 238,
+      "ingresantes": 20,
+      "nota_max": 1336.38,
+      "nota_cierre": 1164.12
+     },
+     "INGENIERÍA CIVIL": {
+      "postulantes": 541,
+      "ingresantes": 13,
+      "nota_max": 1485.0,
+      "nota_cierre": 1182.38
+     },
+     "INGENIERÍA DE INTELIGENCIA ARTIFÍCIAL": {
+      "postulantes": 281,
+      "ingresantes": 35,
+      "nota_max": 1344.88,
+      "nota_cierre": 960.25
+     },
+     "INGENIERÍA DE MINAS": {
+      "postulantes": 338,
+      "ingresantes": 17,
+      "nota_max": 1271.88,
+      "nota_cierre": 1028.25
+     },
+     "INGENIERÍA DE SEGURIDAD Y SALUD EN EL TRABAJO": {
+      "postulantes": 81,
+      "ingresantes": 8,
+      "nota_max": 1257.62,
+      "nota_cierre": 904.25
+     },
+     "INGENIERÍA DE SISTEMAS": {
+      "postulantes": 974,
+      "ingresantes": 35,
+      "nota_max": 1590.62,
+      "nota_cierre": 1104.75
+     },
+     "INGENIERÍA DE SOFTWARE": {
+      "postulantes": 613,
+      "ingresantes": 35,
+      "nota_max": 1417.62,
+      "nota_cierre": 1097.88
+     },
+     "INGENIERÍA DE TELECOMUNICACIONES": {
+      "postulantes": 179,
+      "ingresantes": 26,
+      "nota_max": 1234.88,
+      "nota_cierre": 902.62
+     },
+     "INGENIERÍA DE TRANSPORTE Y SISTEMAS FERROVIARIOS": {
+      "postulantes": 30,
+      "ingresantes": 6,
+      "nota_max": 1063.0,
+      "nota_cierre": 903.0
+     },
+     "INGENIERÍA ELECTRÓNICA": {
+      "postulantes": 264,
+      "ingresantes": 40,
+      "nota_max": 1295.38,
+      "nota_cierre": 959.12
+     },
+     "INGENIERÍA ELÉCTRICA": {
+      "postulantes": 267,
+      "ingresantes": 35,
+      "nota_max": 1201.62,
+      "nota_cierre": 944.88
+     },
+     "INGENIERÍA GEOGRÁFICA": {
+      "postulantes": 67,
+      "ingresantes": 9,
+      "nota_max": 1207.88,
+      "nota_cierre": 906.62
+     },
+     "INGENIERÍA GEOLÓGICA": {
+      "postulantes": 263,
+      "ingresantes": 21,
+      "nota_max": 1280.5,
+      "nota_cierre": 1021.38
+     },
+     "INGENIERÍA INDUSTRIAL": {
+      "postulantes": 973,
+      "ingresantes": 67,
+      "nota_max": 1403.88,
+      "nota_cierre": 1025.38
+     },
+     "INGENIERÍA LOGÍSTICA Y CADENA DE SUMISTRO DIGITAL": {
+      "postulantes": 141,
+      "ingresantes": 16,
+      "nota_max": 1125.25,
+      "nota_cierre": 914.62
+     },
+     "INGENIERÍA MECATRONICA": {
+      "postulantes": 338,
+      "ingresantes": 20,
+      "nota_max": 1306.12,
+      "nota_cierre": 1047.62
+     },
+     "INGENIERÍA MECÁNICA DE FLUIDOS": {
+      "postulantes": 91,
+      "ingresantes": 10,
+      "nota_max": 1263.88,
+      "nota_cierre": 901.75
+     },
+     "INGENIERÍA METALÚRGICA": {
+      "postulantes": 148,
+      "ingresantes": 16,
+      "nota_max": 1092.75,
+      "nota_cierre": 907.0
+     },
+     "INGENIERÍA NUCLEAR": {
+      "postulantes": 69,
+      "ingresantes": 11,
+      "nota_max": 1194.38,
+      "nota_cierre": 902.62
+     },
+     "INGENIERÍA QUÍMICA": {
+      "postulantes": 242,
+      "ingresantes": 31,
+      "nota_max": 1179.5,
+      "nota_cierre": 960.88
+     },
+     "INGENIERÍA TEXTIL Y CONFECCIONES": {
+      "postulantes": 78,
+      "ingresantes": 16,
+      "nota_max": 1305.62,
+      "nota_cierre": 930.0
+     },
+     "INVESTIGACIÓN OPERATIVA": {
+      "postulantes": 87,
+      "ingresantes": 28,
+      "nota_max": 1060.75,
+      "nota_cierre": 758.75
+     },
+     "LENGUAS, TRADUCCIÓN E INTERPRETACIÓN": {
+      "postulantes": 214,
+      "ingresantes": 15,
+      "nota_max": 1302.75,
+      "nota_cierre": 1050.38
+     },
+     "LINGUÍSTICA": {
+      "postulantes": 43,
+      "ingresantes": 16,
+      "nota_max": 1246.12,
+      "nota_cierre": 801.88
+     },
+     "LITERATURA": {
+      "postulantes": 110,
+      "ingresantes": 16,
+      "nota_max": 1383.38,
+      "nota_cierre": 1024.5
+     },
+     "MARKETING": {
+      "postulantes": 179,
+      "ingresantes": 12,
+      "nota_max": 1303.25,
+      "nota_cierre": 1024.12
+     },
+     "MATEMÁTICA": {
+      "postulantes": 87,
+      "ingresantes": 28,
+      "nota_max": 1350.25,
+      "nota_cierre": 805.5
+     },
+     "MICROBIOLOGÍA Y PARASITOLOGÍA": {
+      "postulantes": 57,
+      "ingresantes": 17,
+      "nota_max": 1041.38,
+      "nota_cierre": 836.88
+     },
+     "PRESUPUESTO Y FINANZAS PÚBLICAS": {
+      "postulantes": 98,
+      "ingresantes": 40,
+      "nota_max": 1257.62,
+      "nota_cierre": 778.75
+     },
+     "PRESUPUESTO Y FINANZAS PÚBLICAS - S.J.L": {
+      "postulantes": 29,
+      "ingresantes": 16,
+      "nota_max": 1086.12,
+      "nota_cierre": 684.5
+     },
+     "QUÍMICA": {
+      "postulantes": 89,
+      "ingresantes": 27,
+      "nota_max": 1090.0,
+      "nota_cierre": 810.12
+     },
+     "SOCIOLOGÍA": {
+      "postulantes": 115,
+      "ingresantes": 18,
+      "nota_max": 1279.38,
+      "nota_cierre": 979.12
+     },
+     "TRABAJO SOCIAL": {
+      "postulantes": 226,
+      "ingresantes": 35,
+      "nota_max": 1152.0,
+      "nota_cierre": 910.62
+     }
+    }
+   }
   }
  },
- "generado_utc": "2026-08-26T17:23:43.986815+00:00",
+ "generado_utc": "2026-10-26T17:46:37.734087+00:00",
  "nota": "Agregados calculados de las páginas públicas de resultados de la OCA-UNMSM. Sin datos personales. nota_cierre = mínima entre ingresantes; nota_max = máxima observada. Escala sobre 2,000 puntos."
 }

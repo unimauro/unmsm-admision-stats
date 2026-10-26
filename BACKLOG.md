@@ -1,12 +1,14 @@
 # Backlog — unmsm-admision-stats
 
 ## Hecho
+- [x] 2026-10-26 — Scrapeado 2027-I (Website20271): por ahora solo EBR/EBA publicada, 80 escuelas, 18,878 postulantes, 2,133 ingresantes (8.9 pos/vac). Faltan escuelas de Salud (Medicina, Psicologia, Enfermeria, Odontologia...) — probablemente examen/publicacion en otra fecha.
 - [x] 2026-08-26 — Historico scrapeado de la OCA: 5 procesos (2024-1 a 2026-2), agregados por escuela x modalidad en historico/unmsm_historico.json. Validado vs dataset oficial 2026-1 (notas 95/95 exactas).
 - [x] 2026-08-25 — GA4 instalado (G-GZQH73GDY4); evento support_click del boton BMC ya activo.
 - [x] 2026-08-21 — Dashboard v1 desplegado: resumen, heatmap de cierres por escuela (EBR vs Pre), competencia, modalidades, vacantes sin cubrir, FAQ. Favicon + OG vino/dorado. Yape/BMC.
 - [x] 2026-08-21 — Repo + pipeline: dataset oficial agregado 2026-1 (95 escuelas x modalidad, vacantes/postulantes/ingresantes/notas). Parseo de notas con decimal reconstruido (la fuente quita el punto decimal y agrupa con miles). stats.json validado (notas 428-1679, min<=max).
 
 ## Pendiente
+- [ ] Re-scrapear 2027-I cuando publiquen las escuelas faltantes (Salud) y otras modalidades (borrar .cache_scrape/Website20271* antes).
 - [ ] Integrar historico al dashboard (evolucion de cierres y competencia por proceso).
 - [ ] 2025-2: no esta en linea (Website20252 = 404); intentar via Wayback Machine.
 
