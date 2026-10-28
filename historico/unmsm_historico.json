@@ -6406,8 +6406,8 @@
   "2027-1": {
    "fuente": "https://admision.unmsm.edu.pe/Website20271/",
    "totales": {
-    "postulantes": 18878,
-    "ingresantes": 2133
+    "postulantes": 28829,
+    "ingresantes": 2474
    },
    "por_modalidad": {
     "EDUCACIÓN BÁSICA REGULAR (EBR) Y EDUCACIÓN BÁSICA ALTERNATIVA (EBA)": {
@@ -6525,6 +6525,12 @@
       "nota_max": 1213.75,
       "nota_cierre": 950.12
      },
+     "CIENCIAS DE LOS ALIMENTOS": {
+      "postulantes": 48,
+      "ingresantes": 5,
+      "nota_max": 1084.12,
+      "nota_cierre": 903.0
+     },
      "COMPUTACIÓN CIENTÍFICA": {
       "postulantes": 108,
       "ingresantes": 28,
@@ -6621,11 +6627,23 @@
       "nota_max": 1296.0,
       "nota_cierre": 1028.25
      },
+     "ENFERMERÍA": {
+      "postulantes": 682,
+      "ingresantes": 39,
+      "nota_max": 1337.12,
+      "nota_cierre": 988.25
+     },
      "ESTADÍSTICA": {
       "postulantes": 118,
       "ingresantes": 28,
       "nota_max": 1208.0,
       "nota_cierre": 820.5
+     },
+     "FARMACIA Y BIOQUÍMICA": {
+      "postulantes": 289,
+      "ingresantes": 28,
+      "nota_max": 1273.75,
+      "nota_cierre": 995.12
      },
      "FILOSOFÍA": {
       "postulantes": 43,
@@ -6855,11 +6873,41 @@
       "nota_max": 1350.25,
       "nota_cierre": 805.5
      },
+     "MEDICINA HUMANA": {
+      "postulantes": 4879,
+      "ingresantes": 55,
+      "nota_max": 1776.75,
+      "nota_cierre": 1404.5
+     },
+     "MEDICINA VETERINARIA": {
+      "postulantes": 518,
+      "ingresantes": 19,
+      "nota_max": 1486.62,
+      "nota_cierre": 1066.38
+     },
      "MICROBIOLOGÍA Y PARASITOLOGÍA": {
       "postulantes": 57,
       "ingresantes": 17,
       "nota_max": 1041.38,
       "nota_cierre": 836.88
+     },
+     "NUTRICION": {
+      "postulantes": 253,
+      "ingresantes": 20,
+      "nota_max": 1446.75,
+      "nota_cierre": 960.0
+     },
+     "OBSTETRICIA": {
+      "postulantes": 677,
+      "ingresantes": 36,
+      "nota_max": 1381.62,
+      "nota_cierre": 979.12
+     },
+     "ODONTOLOGÍA": {
+      "postulantes": 537,
+      "ingresantes": 24,
+      "nota_max": 1324.0,
+      "nota_cierre": 1070.5
      },
      "PRESUPUESTO Y FINANZAS PÚBLICAS": {
       "postulantes": 98,
@@ -6873,6 +6921,18 @@
       "nota_max": 1086.12,
       "nota_cierre": 684.5
      },
+     "PSICOLOGÍA": {
+      "postulantes": 1058,
+      "ingresantes": 35,
+      "nota_max": 1304.0,
+      "nota_cierre": 1070.62
+     },
+     "PSICOLOGÍA ORGANIZACIONAL Y DE LA GESTIÓN HUMANA": {
+      "postulantes": 206,
+      "ingresantes": 16,
+      "nota_max": 1180.0,
+      "nota_cierre": 980.25
+     },
      "QUÍMICA": {
       "postulantes": 89,
       "ingresantes": 27,
@@ -6885,6 +6945,36 @@
       "nota_max": 1279.38,
       "nota_cierre": 979.12
      },
+     "TEC. MED. LAB. CLÍNICO Y ANATOMÍA PATOLÓGICA": {
+      "postulantes": 163,
+      "ingresantes": 14,
+      "nota_max": 1235.5,
+      "nota_cierre": 1058.5
+     },
+     "TEC. MED. RADIOLOGÍA": {
+      "postulantes": 177,
+      "ingresantes": 14,
+      "nota_max": 1294.88,
+      "nota_cierre": 968.75
+     },
+     "TEC. MED. TERAPIA FÍSICA Y REHABILITACIÓN": {
+      "postulantes": 199,
+      "ingresantes": 13,
+      "nota_max": 1083.62,
+      "nota_cierre": 925.88
+     },
+     "TEC. MED. TERAPIA OCUPACIONAL": {
+      "postulantes": 158,
+      "ingresantes": 13,
+      "nota_max": 1203.25,
+      "nota_cierre": 918.62
+     },
+     "TOXICOLOGÍA": {
+      "postulantes": 107,
+      "ingresantes": 10,
+      "nota_max": 1056.62,
+      "nota_cierre": 934.38
+     },
      "TRABAJO SOCIAL": {
       "postulantes": 226,
       "ingresantes": 35,
@@ -6895,6 +6985,6 @@
    }
   }
  },
- "generado_utc": "2026-10-26T17:46:37.734087+00:00",
+ "generado_utc": "2026-10-28T14:52:20.284864+00:00",
  "nota": "Agregados calculados de las páginas públicas de resultados de la OCA-UNMSM. Sin datos personales. nota_cierre = mínima entre ingresantes; nota_max = máxima observada. Escala sobre 2,000 puntos."
 }

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Admisión UNMSM en cifras</title>
-<meta name="description" content="Estadísticas agregadas del proceso de admisión 2026-1 de la Universidad Nacional Mayor de San Marcos (UNMSM): postulantes, ingresantes, vacantes, notas de cierre por escuela profesional y comparación entre el examen ordinario y Pre-San Marcos.">
+<meta name="description" content="Estadísticas agregadas de admisión de la Universidad Nacional Mayor de San Marcos (UNMSM): resultados del examen 2027-I y proceso 2026-1: postulantes, ingresantes, vacantes, notas de cierre por escuela profesional y comparación entre el examen ordinario y Pre-San Marcos.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <!-- Google tag (gtag.js) -->
@@ -19,12 +19,12 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Admisión San Marcos en cifras">
-<meta property="og:description" content="Notas de cierre por escuela profesional, postulantes, ingresantes y vacantes del proceso de admisión UNMSM 2026-1. Estadísticas agregadas de datos abiertos oficiales, sin datos personales.">
+<meta property="og:description" content="Resultados del examen de admisión UNMSM 2027-I: notas de cierre, competencia y carreras nuevas, comparado con 2026-I. Estadísticas agregadas de datos abiertos oficiales, sin datos personales.">
 <meta property="og:url" content="https://unimauro.github.io/unmsm-admision-stats/">
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Admisión San Marcos en cifras">
-<meta name="twitter:description" content="Estadísticas abiertas de la admisión UNMSM 2026-1: cierres por escuela, competencia por vacante y modalidades. Sin datos personales.">
+<meta name="twitter:description" content="Examen de admisión UNMSM 2027-I y proceso 2026-1: cierres por escuela, competencia por vacante y modalidades. Sin datos personales.">
 <style>
 :root{
   color-scheme: light;
@@ -264,6 +264,7 @@ footer.page-foot p{max-width:75ch}
     <div class="brand-sub">Admisión · estadísticas abiertas</div>
     <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema claro/oscuro">🌙</button>
     <nav id="side-nav">
+      <a class="nav-link" href="#ultimo"><span class="dot" style="background:var(--a-red)"></span>Examen 2027-I</a>
       <a class="nav-link" href="#resumen"><span class="dot" style="background:var(--vino)"></span>Resumen</a>
       <a class="nav-link" href="#cierres"><span class="dot" style="background:var(--vino)"></span>Notas de cierre</a>
       <a class="nav-link" href="#competencia"><span class="dot" style="background:var(--s2)"></span>Más competitivas</a>
@@ -282,6 +283,7 @@ footer.page-foot p{max-width:75ch}
   <main>
     <nav class="topnav" aria-label="Secciones">
       <button class="theme-toggle" id="theme-toggle-m" aria-label="Cambiar tema claro/oscuro">🌙</button>
+      <a href="#ultimo"><span class="dot" style="background:var(--a-red)"></span>2027-I</a>
       <a href="#resumen"><span class="dot" style="background:var(--vino)"></span>Resumen</a>
       <a href="#cierres"><span class="dot" style="background:var(--vino)"></span>Cierres</a>
       <a href="#competencia"><span class="dot" style="background:var(--s2)"></span>Competencia</a>
@@ -294,7 +296,7 @@ footer.page-foot p{max-width:75ch}
     <div class="shell">
       <header class="site">
         <h1>Admisión <span class="uni">San Marcos</span> en cifras</h1>
-        <p class="sub">Estadísticas agregadas del proceso de admisión 2026-1 de la Universidad Nacional Mayor
+        <p class="sub">Resultados del último examen de admisión (2027-I) y estadísticas agregadas del proceso 2026-1 de la Universidad Nacional Mayor
         de San Marcos: cuánta gente postuló a cada escuela profesional, cuántos ingresaron, cuántas vacantes
         quedaron sin cubrir y con qué nota cerró cada carrera, por examen ordinario y por Pre-San Marcos.
         Todo sale del dataset agregado oficial publicado como datos abiertos.</p>
@@ -632,6 +634,112 @@ function heatRGBA(t){
     : `rgba(107,31,42,${t.toFixed(3)})`;
 }
 
+/* ---------- último examen (histórico OCA): sección al inicio ---------- */
+let lastHist = null;
+const ULT = "2027-1", PREV = "2026-1";
+const procLbl = p => p.replace(/-1$/, "-I").replace(/-2$/, "-II");
+/* la OCA a veces añade " - LIMA" a la sede principal: se normaliza para comparar procesos */
+const normEsc = s => String(s).replace(/ - LIMA$/, "");
+function ebrDe(hist, proc){
+  const P = ((hist||{}).procesos||{})[proc];
+  if(!P) return null;
+  const k = Object.keys(P.por_modalidad||{}).find(m => m.includes("REGULAR"));
+  if(!k) return null;
+  const out = {};
+  Object.entries(P.por_modalidad[k]).forEach(([n,e]) => out[normEsc(n)] = e);
+  return out;
+}
+
+function renderUltimo(app, fullW){
+  const A = ebrDe(lastHist, ULT);
+  if(!A) return;
+  const B = ebrDe(lastHist, PREV) || {};
+  const L = procLbl(ULT), LP = procLbl(PREV);
+  const rows = Object.entries(A).map(([n,e]) => {
+    const p = B[n] || null;
+    return {name:n, label:ESC_SHORT(n), post:e.postulantes, ing:e.ingresantes, max:e.nota_max, cierre:e.nota_cierre,
+      ratio: e.ingresantes ? e.postulantes/e.ingresantes : null,
+      prev: p ? p.nota_cierre : null, prevPost: p ? p.postulantes : null,
+      delta: p && p.nota_cierre != null && e.nota_cierre != null ? e.nota_cierre - p.nota_cierre : null};
+  });
+  const sum = (o, k) => Object.values(o).reduce((s,e)=>s+(e[k]||0), 0);
+  const post = sum(A,"postulantes"), ing = sum(A,"ingresantes");
+  const postP = sum(B,"postulantes"), ingP = sum(B,"ingresantes");
+  const top = rows.slice().sort((a,b)=>(b.max||0)-(a.max||0))[0];
+  const nuevas = rows.filter(r => !(r.name in B));
+
+  if(lastHist.generado_utc){
+    const hg = new Date(lastHist.generado_utc).toLocaleString("es-PE",{dateStyle:"long", timeStyle:"short", timeZone:"America/Lima"});
+    $("#updated").textContent = "Examen " + L + ": datos al " + hg + " (Lima) · Proceso 2026-I: dataset oficial";
+    const su = $("#side-updated"); if(su) su.textContent = "Examen " + L + ": " + hg + " (Lima)";
+  }
+  const s0 = section("ultimo", "Último examen · " + L, "--a-red",
+    "Resultados del examen de admisión " + L,
+    "Modalidad ordinaria (EBR/EBA), calculado de las páginas públicas de resultados de la Oficina Central de Admisión " +
+    "y comparado con el examen ordinario " + LP + ". Solo agregados por escuela: no se guarda ningún nombre. " +
+    "Ingresante = postulante marcado como «alcanzó vacante»; nota de cierre = la más baja entre los ingresantes.");
+  const t0 = document.createElement("div"); t0.className = "tiles";
+  const dPost = postP ? 100*(post-postP)/postP : null;
+  t0.appendChild(tile("Postulantes · " + L, fmt(post),
+    dPost!=null ? (dPost>=0?"+":"") + fmt1(dPost) + "% vs " + LP + " (" + fmt(postP) + ")" : "", "var(--vino)",
+    "Postulantes del examen ordinario (EBR/EBA) " + L + " en las " + rows.length + " escuelas. La comparación es contra la misma modalidad en " + LP + "."));
+  t0.appendChild(tile("Ingresantes · " + L, fmt(ing), pct(post?100*ing/post:null) + " de admisión", "var(--s3)",
+    "Postulantes que alcanzaron vacante. En " + LP + " fueron " + fmt(ingP) + "."));
+  t0.appendChild(tile("1 de cada", ing ? fmt(Math.round(post/ing)) : "–", "postulantes ingresó", "var(--a-violet)",
+    "Por cada N postulantes al examen ordinario, uno consiguió vacante. En " + LP + ": 1 de cada " + (ingP?fmt(Math.round(postP/ingP)):"–") + "."));
+  t0.appendChild(tile("Nota más alta · " + L, n2(top && top.max), top ? ESC_SHORT(top.name) : "", "var(--s2)",
+    "El puntaje más alto observado en el examen, sobre 2,000 puntos."));
+  s0.appendChild(t0);
+
+  const cards = document.createElement("div"); cards.className = "cards";
+  const cier = rows.filter(r=>r.cierre!=null).sort((a,b)=>b.cierre-a.cierre).slice(0, 20)
+    .map(r => ({...r, values:[r.cierre, r.prev||0]}));
+  cards.appendChild(card("Las 20 notas de cierre más altas · " + L,
+    "Puntaje del último ingresante de cada escuela (sobre 2,000), junto al cierre de " + LP + ". Pasa el cursor para ver la variación.",
+    hBars(cier, {
+      W: fullW, labelW: 300,
+      series:[{name:L, color:css("--vino")},{name:LP, color:css("--axis")}],
+      aria:"Notas de cierre más altas del examen " + L + " comparadas con " + LP,
+      fmtVal: (v,it,si) => si===1 && !it.prev ? "nueva" : n2(v),
+      tip: it => `<div class="t-title">${esc(it.name)}</div>
+        <div class="t-row">Cierre ${L}: ${n2(it.cierre)} · ${LP}: ${n2(it.prev)}</div>
+        ${it.delta!=null?`<div class="t-row">Variación: ${it.delta>=0?"+":""}${n2(it.delta)} puntos</div>`:""}
+        <div class="t-row">${fmt(it.post)} postulantes · ${fmt(it.ing)} ingresantes · máx. ${n2(it.max)}</div>`
+    }), null,
+    [{label:L, color:css("--vino")},{label:LP, color:css("--axis")}]));
+
+  const comp = rows.filter(r=>r.ratio!=null && r.post>=100).sort((a,b)=>b.ratio-a.ratio).slice(0, 15)
+    .map(r => ({...r, values:[r.ratio]}));
+  cards.appendChild(card("Las 15 escuelas más competitivas · " + L,
+    "Postulantes por cada ingresante (escuelas con al menos 100 postulantes).",
+    hBars(comp, {
+      W: fullW, labelW: 300,
+      series:[{name:"postulantes por ingresante", color:css("--s2")}],
+      aria:"Postulantes por ingresante en el examen " + L,
+      fmtVal: v => "1 de " + fmt(Math.round(v)),
+      tip: it => `<div class="t-title">${esc(it.name)}</div>
+        <div class="t-row">${fmt(it.post)} postulantes · ${fmt(it.ing)} ingresantes</div>
+        <div class="t-row">Cierre: ${n2(it.cierre)} · máx. ${n2(it.max)}</div>`
+    }),
+    tableView(["Escuela","Postulantes","Ingresantes","1 de cada","Nota máx.","Cierre " + L,"Cierre " + LP,"Variación"],
+      rows.slice().sort((a,b)=>(b.cierre||0)-(a.cierre||0)).map(r=>[r.name, fmt(r.post), fmt(r.ing),
+        r.ratio ? fmt(Math.round(r.ratio)) : "–", n2(r.max), n2(r.cierre), r.prev!=null ? n2(r.prev) : "nueva",
+        r.delta!=null ? (r.delta>=0?"+":"") + n2(r.delta) : "–"]),
+      "Ver las " + rows.length + " escuelas de " + L),
+    []));
+  s0.appendChild(cards);
+
+  const conD = rows.filter(r=>r.delta!=null).sort((a,b)=>b.delta-a.delta);
+  const sube = conD.slice(0, 3), baja = conD.slice(-3).reverse();
+  const lista = xs => xs.map(r => "<b>" + esc(ESC_SHORT(r.name)) + "</b> (" + (r.delta>=0?"+":"") + n2(r.delta) + ")").join(", ");
+  s0.appendChild(nota("--a-red","--wash-s2",
+    (nuevas.length ? "Debutan <b>" + nuevas.length + "</b> escuelas en " + L + ": " +
+      nuevas.map(r => "<b>" + esc(ESC_SHORT(r.name)) + "</b> (cierre " + n2(r.cierre) + ", " + fmt(r.post) + " postulantes)").join(", ") + ". " : "") +
+    "Frente a " + LP + ", los cierres que más subieron fueron " + lista(sube) + "; los que más bajaron, " + lista(baja) + ". " +
+    "Las secciones siguientes corresponden al proceso 2026-I completo (dataset oficial, con vacantes y Pre-San Marcos)."));
+  app.appendChild(s0);
+}
+
 /* ---------- render principal ---------- */
 let lastStats = null;
 
@@ -664,6 +772,8 @@ function render(stats){
     const vs = Object.values(e.por_modalidad || {}).map(d=>d.nota_max).filter(v=>v!=null);
     return vs.length ? Math.max(...vs) : null;
   };
+
+  renderUltimo(app, fullW);
 
   /* ===== 1. Resumen ===== */
   const s1 = section("resumen", "Resumen", "--vino",
@@ -1034,9 +1144,9 @@ window.addEventListener("resize", () => {
 
 window.__render = render;   // punto de entrada para las pruebas automatizadas
 
-fetch("data/stats.json", {cache:"no-store"})
-  .then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-  .then(s => { lastStats = s; render(s); })
+const getJSON = u => fetch(u, {cache:"no-store"}).then(r => { if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
+Promise.all([getJSON("data/stats.json"), getJSON("historico/unmsm_historico.json").catch(() => null)])
+  .then(([s, h]) => { lastHist = h; lastStats = s; render(s); })
   .catch(err => {
     $("#app").innerHTML = "";
     $("#app").className = "loading";
